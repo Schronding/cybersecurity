@@ -1,0 +1,14 @@
+# Media and document binaries used as steganography samples
+*.mp4
+*.jpeg
+*.jpg
+*.png
+*.wav
+*.mp3
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
