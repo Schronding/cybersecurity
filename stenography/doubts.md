@@ -234,3 +234,78 @@ The generalisation that will bite elsewhere: `if x:` on a value that could legit
 
 - python_script.py comments 4 and 6 - no comments carrying these numbers exist in the file as provided; if they were written into another file or removed before you sent this, attach that version and they will be covered.
 - metadatos.json - contains no context comments, and JSON has no comment syntax in which to write any; it was read as evidence for entries 0, 4 and 6 rather than annotated.
+
+## generate_spec_song_v4.mp4
+
+### 9. Purpose of the librosa library (generate_spec_song_v4.mp4 - comment 4) [Mechanism]
+
+#### User's Discovery/Doubt:
+
+> I have never heard of the library `librosa`. What does it do?
+> As we're in an stenography topic I suppose it is some kind of mixture
+> between library and virtuosa... so I assume the purpose is to read
+> strange file types in diverse files in python.
+
+#### Verdict:
+
+Wrong - `librosa` is a standard Python package specifically built for audio and music analysis, not a custom steganography tool for obscure file types.
+
+#### Explanation:
+
+The package abstracts away the complex math required to read and process sound waves, converting standard audio files into numerical matrices (NumPy arrays) that represent amplitude over time. In cybersecurity and steganography challenges, it is used simply because it is the industry standard for performing operations like Fourier transforms, which are necessary to reveal data mathematically hidden within specific acoustic frequency bands.
+
+### 10. Meaning of STFT (generate_spec_song_v4.mp4 - comment 5) [Mechanism]
+
+#### User's Discovery/Doubt:
+
+> What does "stft" stand for? As we're analizing audio
+> I am practically sure that tft stands for -Time Fourier Transform.
+> But the s... maybe Sample?
+
+#### Verdict:
+
+Partly correct - The "TFT" is indeed Time Fourier Transform, but the "S" stands for Short, not Sample.
+
+#### Explanation:
+
+The standard Fourier Transform identifies all frequencies present in a complete signal, but it discards time information, making it impossible to know *when* a specific frequency occurred. To map frequencies over time—which is necessary to draw a 2D spectrogram—the audio is divided into small, overlapping windows of time. The Fourier Transform is then applied to each of these brief windows individually. This sequential mathematical operation is called the Short-Time Fourier Transform.
+
+### 11. CTF flag convention in spectrograms (generate_spec_song_v4.mp4 - comment 7) [Mechanism]
+
+#### User's Discovery/Doubt:
+
+> In the image generated there was a command that say something
+> along the lines of `utflag{spo3trogr4mophone3}`. As it was quite squeezed
+> to the top I wasn't really able to see it clearly, but that is what I read.
+> I imagine it is some kind of convenction, as "spot3trogr4monophon3: seems to
+> be hinting at something sound related.
+
+#### Verdict:
+
+Partly correct - It is a known convention, but it represents a "flag" proving you solved a Capture The Flag (CTF) challenge, not an executable command.
+
+#### Explanation:
+
+In cybersecurity exercises, the primary objective is to find a hidden string of text formatted as `prefix{some_text}`. Discovering this string inside the spectrogram means you have successfully decoded the audio steganography. Hiding visual text inside the high frequencies of an audio file is a classic CTF challenge. The string itself does not execute anything; submitting it to the challenge scoring platform is how points are earned.
+
+## Unprompted correction
+
+### 12. Logarithmic scale distorts hidden visual text (generate_spec_song_v4.mp4) [Mechanism]
+
+#### Evidence in the code:
+
+`img = librosa.display.specshow(S_db, sr=sr, x_axis='time', y_axis='log')`
+
+#### Verdict:
+
+Wrong - The text appears squeezed at the top because the code plots the y-axis on a logarithmic scale, not because the hidden message was inherently drawn that way.
+
+#### Explanation:
+
+Audio steganography tools generate visual text by mapping pixels directly to distinct frequency bands using a linear scale. The script currently plots using `y_axis='log'`, which expands the vertical space for lower frequencies (matching human hearing sensitivity) and heavily compresses higher frequencies into a tiny visual area. Because hidden text is typically placed in the inaudible high-frequency range to prevent altering the audio, the logarithmic scale squashes the letters into an illegible band. A linear scale represents all frequency bands equally, preserving the original proportions of the hidden geometry.
+
+## Noted
+
+## Not addressed
+
+4 doubts written, 3 comments merged into them, 2 Partly correct, 2 Wrong, 288/300 words, last number used 12.
