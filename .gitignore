@@ -1,0 +1,6 @@
+.direnv/
+
+# Python / uv
+__pycache__/
+*.pyc
+.venv/
