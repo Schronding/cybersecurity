@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///nix/store/pjb2nj5h3ly0kix9qr4f1l3xis2ff6d9-nmap-7.99/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Tue Oct  6 09:07:48 2026 as: nmap -sS -F -oA sneaky_scan 132.248.142.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sS -F -oA sneaky_scan 132.248.142.0/24" start="1791299268" startstr="Tue Oct  6 09:07:48 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.14" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.17" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.23" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.38" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.34" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.35" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.49" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.46" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.108" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.111" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.254" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.21" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.22" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.11" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.12" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.25" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.189" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.36" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.45" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.55" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.102" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.142.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.3" addrtype="ipv4"/>
+<hostnames>
+<hostname name="folio.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3190" rttvar="1128" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.4" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bibloinb.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3009" rttvar="1156" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3870" rttvar="2129" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="60"/>
+<address addr="132.248.142.6" addrtype="ipv4"/>
+<hostnames>
+<hostname name="posgrado.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="90">
+<extrareasons reason="no-response" count="90" proto="tcp" ports="7,9,13,23,25-26,37,53,79,81,88,106,110,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="548"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="afp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="nfs" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3009" rttvar="961" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299288"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.11" addrtype="ipv4"/>
+<hostnames>
+<hostname name="dbserver.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="reset" count="96" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="4609" rttvar="1896" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.12" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3543" rttvar="2386" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299291"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.13" addrtype="ipv4"/>
+<hostnames>
+<hostname name="personal.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="95">
+<extrareasons reason="reset" count="95" proto="tcp" ports="7,9,13,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="4114" rttvar="2087" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299284"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.14" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="reset" count="96" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="4767" rttvar="3572" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299291"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.17" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="reset" count="96" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ldap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3018" rttvar="510" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299290"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.21" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="reset" count="96" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="postgresql" method="table" conf="3"/></port>
+</ports>
+<times srtt="5768" rttvar="5364" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299287"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.22" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="96">
+<extrareasons reason="reset" count="96" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3469" rttvar="1171" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299289"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.23" addrtype="ipv4"/>
+<hostnames>
+<hostname name="salva.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="94">
+<extrareasons reason="reset" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="6516" rttvar="5764" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.25" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="2527" rttvar="574" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3363" rttvar="1655" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299287"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.34" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="reset" count="97" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3878" rttvar="1712" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="echo-reply" reason_ttl="60"/>
+<address addr="132.248.142.35" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="90">
+<extrareasons reason="no-response" count="90" proto="tcp" ports="7,9,13,23,25-26,37,53,79,81,88,106,110,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="60"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="closed" reason="reset" reason_ttl="60"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="60"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="548"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="afp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2049"><state state="closed" reason="reset" reason_ttl="60"/><service name="nfs" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="20654" rttvar="34540" to="158814"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.36" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="11161" rttvar="16571" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.37" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.maestria.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="11524" rttvar="15799" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="echo-reply" reason_ttl="60"/>
+<address addr="132.248.142.38" addrtype="ipv4"/>
+<hostnames>
+<hostname name="www.visualizacion.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="90">
+<extrareasons reason="no-response" count="90" proto="tcp" ports="7,9,13,23,25-26,37,53,79,81,88,106,110,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="60"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="548"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="afp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="nfs" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3376" rttvar="1033" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="252"/>
+<address addr="132.248.142.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="97">
+<extrareasons reason="no-response" count="97" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="27486" rttvar="50647" to="230074"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.45" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="13856" rttvar="21575" to="100156"/>
+</host>
+<host starttime="1791299272" endtime="1791299288"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.46" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="reset" count="97" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="2809" rttvar="514" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="9721" rttvar="11791" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299291"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.49" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="reset" count="97" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3154" rttvar="482" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299283"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="95">
+<extrareasons reason="reset" count="95" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3098" rttvar="485" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299289"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="95">
+<extrareasons reason="reset" count="95" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ppp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3221" rttvar="251" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="59"/>
+<address addr="132.248.142.55" addrtype="ipv4"/>
+<hostnames>
+<hostname name="penfield.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="6777" rttvar="6620" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299293"><status state="up" reason="reset" reason_ttl="59"/>
+<address addr="132.248.142.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="59"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="59"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="12288" rttvar="16717" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299282"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="97">
+<extrareasons reason="reset" count="97" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="2735" rttvar="248" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.102" addrtype="ipv4"/>
+<hostnames>
+<hostname name="correo.enesjuriquilla.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="13555" rttvar="22364" to="103011"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="61"/>
+<address addr="132.248.142.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="95">
+<extrareasons reason="no-response" count="95" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="4425" rttvar="3209" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299285"><status state="up" reason="echo-reply" reason_ttl="61"/>
+<address addr="132.248.142.108" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="95">
+<extrareasons reason="reset" count="95" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="3101" rttvar="436" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="59"/>
+<address addr="132.248.142.111" addrtype="ipv4"/>
+<hostnames>
+<hostname name="urm.inb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="93">
+<extrareasons reason="no-response" count="91" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8081,8888,9100,9999-10000,32768,49152-49157"/>
+<extrareasons reason="admin-prohibited" count="2" proto="tcp" ports="81,5432"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="59"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="59"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="3734" rttvar="1068" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="123"/>
+<address addr="132.248.142.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="91">
+<extrareasons reason="no-response" count="91" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8081,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="closed" reason="reset" reason_ttl="123"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="123"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="123"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="reset" reason_ttl="123"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="3123" rttvar="467" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="123"/>
+<address addr="132.248.142.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="91">
+<extrareasons reason="no-response" count="91" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8081,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="closed" reason="reset" reason_ttl="123"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="reset" reason_ttl="123"/><service name="postgresql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="123"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="5558" rttvar="4498" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="syn-ack" reason_ttl="59"/>
+<address addr="132.248.142.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="93">
+<extrareasons reason="no-response" count="93" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="59"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="3245" rttvar="573" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="reset" reason_ttl="59"/>
+<address addr="132.248.142.189" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="94">
+<extrareasons reason="no-response" count="94" proto="tcp" ports="7,9,13,21,23,25-26,37,53,79,81,88,106,110-111,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="59"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="4136" rttvar="1384" to="100000"/>
+</host>
+<host starttime="1791299272" endtime="1791299294"><status state="up" reason="echo-reply" reason_ttl="253"/>
+<address addr="132.248.142.254" addrtype="ipv4"/>
+<hostnames>
+<hostname name="router.cnb.unam.mx" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="96">
+<extrareasons reason="no-response" count="96" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,119,135,139,143-144,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="179"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="bgp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+</ports>
+<times srtt="2400" rttvar="353" to="100000"/>
+</host>
+<runstats><finished time="1791299294" timestr="Tue Oct  6 09:08:14 2026" summary="Nmap done at Tue Oct  6 09:08:14 2026; 256 IP addresses (38 hosts up) scanned in 26.57 seconds" elapsed="26.57" exit="success"/><hosts up="38" down="218" total="256"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,74 @@
+# Nmap 7.991 scan initiated Wed Oct 28 16:37:59 2026 as: nmap -p 80,443,8080,8443,8888 --open -sS -n -oG descubrimientos_web.txt 132.248.248.0/24
+Host: 132.248.248.33 ()	Status: Up
+Host: 132.248.248.33 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (3)
+Host: 132.248.248.37 ()	Status: Up
+Host: 132.248.248.37 ()	Ports: 8080/open/tcp//http-proxy///	Ignored State: filtered (4)
+Host: 132.248.248.57 ()	Status: Up
+Host: 132.248.248.57 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (3)
+Host: 132.248.248.61 ()	Status: Up
+Host: 132.248.248.61 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.62 ()	Status: Up
+Host: 132.248.248.62 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.74 ()	Status: Up
+Host: 132.248.248.74 ()	Ports: 80/open/tcp//http///, 8080/open/tcp//http-proxy///	Ignored State: closed (3)
+Host: 132.248.248.87 ()	Status: Up
+Host: 132.248.248.87 ()	Ports: 80/open/tcp//http///, 8080/open/tcp//http-proxy///	Ignored State: closed (3)
+Host: 132.248.248.95 ()	Status: Up
+Host: 132.248.248.95 ()	Ports: 443/open/tcp//https///, 8080/open/tcp//http-proxy///
+Host: 132.248.248.101 ()	Status: Up
+Host: 132.248.248.101 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.102 ()	Status: Up
+Host: 132.248.248.102 ()	Ports: 443/open/tcp//https///, 8888/open/tcp//sun-answerbook///	Ignored State: closed (3)
+Host: 132.248.248.103 ()	Status: Up
+Host: 132.248.248.103 ()	Ports: 80/open/tcp//http///	Ignored State: closed (4)
+Host: 132.248.248.107 ()	Status: Up
+Host: 132.248.248.107 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.112 ()	Status: Up
+Host: 132.248.248.112 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.113 ()	Status: Up
+Host: 132.248.248.113 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.115 ()	Status: Up
+Host: 132.248.248.115 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.121 ()	Status: Up
+Host: 132.248.248.121 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.128 ()	Status: Up
+Host: 132.248.248.128 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///
+Host: 132.248.248.131 ()	Status: Up
+Host: 132.248.248.131 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///
+Host: 132.248.248.137 ()	Status: Up
+Host: 132.248.248.137 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.138 ()	Status: Up
+Host: 132.248.248.138 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///
+Host: 132.248.248.152 ()	Status: Up
+Host: 132.248.248.152 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.153 ()	Status: Up
+Host: 132.248.248.153 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.154 ()	Status: Up
+Host: 132.248.248.154 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.157 ()	Status: Up
+Host: 132.248.248.157 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.158 ()	Status: Up
+Host: 132.248.248.158 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.159 ()	Status: Up
+Host: 132.248.248.159 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.165 ()	Status: Up
+Host: 132.248.248.165 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.168 ()	Status: Up
+Host: 132.248.248.168 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.169 ()	Status: Up
+Host: 132.248.248.169 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///
+Host: 132.248.248.175 ()	Status: Up
+Host: 132.248.248.175 ()	Ports: 443/open/tcp//https///	Ignored State: closed (4)
+Host: 132.248.248.177 ()	Status: Up
+Host: 132.248.248.177 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.232 ()	Status: Up
+Host: 132.248.248.232 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///, 8443/open/tcp//https-alt///	Ignored State: closed (2)
+Host: 132.248.248.233 ()	Status: Up
+Host: 132.248.248.233 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (3)
+Host: 132.248.248.239 ()	Status: Up
+Host: 132.248.248.239 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.248 ()	Status: Up
+Host: 132.248.248.248 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+Host: 132.248.248.249 ()	Status: Up
+Host: 132.248.248.249 ()	Ports: 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: filtered (3)
+# Nmap done at Wed Oct 28 16:38:08 2026 -- 256 IP addresses (48 hosts up) scanned in 8.07 seconds

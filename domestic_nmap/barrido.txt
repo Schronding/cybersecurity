@@ -1,0 +1,8 @@
+# Nmap 7.99 scan initiated Mon Oct  5 20:56:10 2026 as: nmap -sn -oN barrido.txt 192.168.0.0/24
+Nmap scan report for 192.168.0.1
+Host is up (0.0093s latency).
+Nmap scan report for 192.168.0.2
+Host is up (0.061s latency).
+Nmap scan report for 192.168.0.253
+Host is up (0.0027s latency).
+# Nmap done at Mon Oct  5 20:56:17 2026 -- 256 IP addresses (3 hosts up) scanned in 7.14 seconds

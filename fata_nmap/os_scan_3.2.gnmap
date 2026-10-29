@@ -1,0 +1,78 @@
+# Nmap 7.99 scan initiated Tue Oct  6 09:09:07 2026 as: nmap -sV -O -oA os_scan_3.2 132.248.142.0/24
+Host: 132.248.142.3 (folio.inb.unam.mx)	Status: Up
+Host: 132.248.142.3 (folio.inb.unam.mx)	Ports: 80/open/tcp//http//Apache httpd 2.4.65 ((Debian))/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.65/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 263	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.4 (bibloinb.inb.unam.mx)	Status: Up
+Host: 132.248.142.4 (bibloinb.inb.unam.mx)	Ports: 80/open/tcp//http//Apache httpd 2.4.68/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.68/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 260	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.5 ()	Status: Up
+Host: 132.248.142.5 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52 ((Ubuntu))/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.52/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (993)	Seq Index: 255	IP ID Seq: All zeros
+Host: 132.248.142.6 (posgrado.inb.unam.mx)	Status: Up
+Host: 132.248.142.6 (posgrado.inb.unam.mx)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh//OpenSSH 8.2 (protocol 2.0)/, 80/open/tcp//http//nginx (reverse proxy)/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//nginx (reverse proxy)/, 548/open/tcp//afp//Netatalk 3.1.12 (name: nas-inb; protocol 3.4)/, 2000/open/tcp//cisco-sccp?///, 2049/open/tcp//nfs//2-4 (RPC #100003)/, 5060/open/tcp//sip?///	Ignored State: filtered (990)	Seq Index: 262	IP ID Seq: All zeros
+Host: 132.248.142.11 (dbserver.inb.unam.mx)	Status: Up
+Host: 132.248.142.11 (dbserver.inb.unam.mx)	Ports: 22/open/tcp//ssh//OpenSSH 5.8p1 Debian 1ubuntu3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.17/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (996)	Seq Index: 259	IP ID Seq: All zeros
+Host: 132.248.142.12 ()	Status: Up
+Host: 132.248.142.12 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52 ((Ubuntu))/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.52/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (993)	Seq Index: 257	IP ID Seq: All zeros
+Host: 132.248.142.13 (personal.inb.unam.mx)	Status: Up
+Host: 132.248.142.13 (personal.inb.unam.mx)	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/, 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (995)	Seq Index: 258	IP ID Seq: All zeros
+Host: 132.248.142.14 ()	Status: Up
+Host: 132.248.142.14 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.4.1/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (996)	Seq Index: 258	IP ID Seq: All zeros
+Host: 132.248.142.17 ()	Status: Up
+Host: 132.248.142.17 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)/, 389/open/tcp//ldap//OpenLDAP 2.2.X - 2.3.X/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (996)	Seq Index: 262	IP ID Seq: All zeros
+Host: 132.248.142.21 ()	Status: Up
+Host: 132.248.142.21 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///, 5432/open/tcp//postgresql//PostgreSQL DB 9.2.0 - 9.2.6/	Ignored State: closed (996)	Seq Index: 261	IP ID Seq: All zeros
+Host: 132.248.142.22 ()	Status: Up
+Host: 132.248.142.22 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.6.0/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (996)	Seq Index: 254	IP ID Seq: All zeros
+Host: 132.248.142.23 (salva.inb.unam.mx)	Status: Up
+Host: 132.248.142.23 (salva.inb.unam.mx)	Ports: 22/open/tcp//ssh//OpenSSH 5.8p1 Debian 7ubuntu1 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.2.4 (Phusion Passenger 3.0.18 (mod_rails|mod_rack))/, 443/open/tcp//ssl|https//nginx|1.2.4/, 2000/open/tcp//tcpwrapped///, 3000/open/tcp//http//WEBrick httpd 1.3.1 (Ruby 2.0.0 (2013-11-22))/, 5060/open/tcp//tcpwrapped///	Ignored State: closed (994)	Seq Index: 260	IP ID Seq: All zeros
+Host: 132.248.142.25 ()	Status: Up
+Host: 132.248.142.25 ()	Ports: 80/open/tcp//http?///, 113/closed/tcp//ident///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 264	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.33 ()	Status: Up
+Host: 132.248.142.33 ()	Ports: 80/open/tcp//http?///, 113/closed/tcp//ident///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 261	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.34 ()	Status: Up
+Host: 132.248.142.34 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (997)	Seq Index: 263	IP ID Seq: All zeros
+Host: 132.248.142.35 ()	Status: Up
+Host: 132.248.142.35 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh//OpenSSH 7.9 (protocol 2.0; HPN-SSH patch 14v15)/, 80/open/tcp//http//nginx/, 111/closed/tcp//rpcbind///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 548/open/tcp//afp//Netatalk 3.1.12dev (name: freenas)/, 2000/open/tcp//cisco-sccp?///, 2049/closed/tcp//nfs///, 5060/open/tcp//sip?///	Ignored State: filtered (990)	Seq Index: 261	IP ID Seq: All zeros
+Host: 132.248.142.36 ()	Status: Up
+Host: 132.248.142.36 ()	Ports: 80/open/tcp//http?///, 113/closed/tcp//ident///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 261	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.37 (www.maestria.inb.unam.mx)	Status: Up
+Host: 132.248.142.37 (www.maestria.inb.unam.mx)	Ports: 80/open/tcp//http//Apache httpd 2.4.68 ((Debian))/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.68/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 261	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.38 (www.visualizacion.inb.unam.mx)	Status: Up
+Host: 132.248.142.38 (www.visualizacion.inb.unam.mx)	Ports: 21/open/tcp//ftp//ProFTPD/, 22/open/tcp//ssh//OpenSSH 7.9 (protocol 2.0; HPN-SSH patch 14v15)/, 80/open/tcp//http//nginx/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 113/closed/tcp//ident///, 443/closed/tcp//https///, 548/open/tcp//afp//Netatalk 3.1.12dev (name: freenas)/, 2000/open/tcp//cisco-sccp?///, 2049/open/tcp//nfs//2-3 (RPC #100003)/, 5060/open/tcp//sip?///	Ignored State: filtered (990)	Seq Index: 258	IP ID Seq: All zeros
+Host: 132.248.142.40 ()	Status: Up
+Host: 132.248.142.40 ()	Ports: 113/closed/tcp//ident///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///	Ignored State: filtered (997)	Seq Index: 254	IP ID Seq: Incremental
+Host: 132.248.142.45 ()	Status: Up
+Host: 132.248.142.45 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52 ((Ubuntu))/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Apache httpd 2.4.52/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (993)	Seq Index: 263	IP ID Seq: All zeros
+Host: 132.248.142.46 ()	Status: Up
+Host: 132.248.142.46 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (997)	Seq Index: 259	IP ID Seq: All zeros
+Host: 132.248.142.48 ()	Status: Up
+Host: 132.248.142.48 ()	Ports: 80/open/tcp//tcpwrapped///, 113/closed/tcp//ident///, 443/open/tcp//ssl|https///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 263	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.49 ()	Status: Up
+Host: 132.248.142.49 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (997)	Seq Index: 256	IP ID Seq: All zeros
+Host: 132.248.142.51 ()	Status: Up
+Host: 132.248.142.51 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.14.0 (Phusion Passenger(R) 6.0.14)/, 443/open/tcp//ssl|http//nginx 1.14.0 (Ubuntu)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (995)	Seq Index: 260	IP ID Seq: All zeros
+Host: 132.248.142.53 ()	Status: Up
+Host: 132.248.142.53 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.1.19/, 2000/open/tcp//tcpwrapped///, 3000/open/tcp//http//WEBrick httpd 1.3.1 (Ruby 2.0.0 (2013-11-22))/, 5060/open/tcp//tcpwrapped///	Ignored State: closed (995)	Seq Index: 262	IP ID Seq: All zeros
+Host: 132.248.142.55 (penfield.inb.unam.mx)	Status: Up
+Host: 132.248.142.55 (penfield.inb.unam.mx)	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52 ((Ubuntu))/, 113/closed/tcp//ident///, 443/open/tcp//http//nginx 1.18.0 (Ubuntu)/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///	Ignored State: filtered (994)	Seq Index: 260	IP ID Seq: All zeros
+Host: 132.248.142.57 ()	Status: Up
+Host: 132.248.142.57 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/closed/tcp//http///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///	Ignored State: filtered (994)	Seq Index: 257	IP ID Seq: All zeros
+Host: 132.248.142.60 ()	Status: Up
+Host: 132.248.142.60 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 2000/open/tcp//tcpwrapped///, 5060/open/tcp//tcpwrapped///	Ignored State: closed (997)	Seq Index: 255	IP ID Seq: All zeros
+Host: 132.248.142.102 (correo.enesjuriquilla.unam.mx)	Status: Up
+Host: 132.248.142.102 (correo.enesjuriquilla.unam.mx)	Ports: 80/open/tcp//http?///, 113/closed/tcp//ident///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 260	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.103 ()	Status: Up
+Host: 132.248.142.103 ()	Ports: 80/open/tcp//http?///, 113/closed/tcp//ident///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (994)	Seq Index: 262	IP ID Seq: Broken little-endian incremental
+Host: 132.248.142.108 ()	Status: Up
+Host: 132.248.142.108 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 2000/open/tcp//tcpwrapped///, 3306/open/tcp//mysql//MySQL 5.7.33-0ubuntu0.16.04.1/, 5060/open/tcp//tcpwrapped///	Ignored State: closed (995)	Seq Index: 254	IP ID Seq: All zeros
+Host: 132.248.142.111 (urm.inb.unam.mx)	Status: Up
+Host: 132.248.142.111 (urm.inb.unam.mx)	Ports: 80/closed/tcp//http///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8080/open/tcp//http//Apache Tomcat (language: en)/, 8090/open/tcp//http//Apache Tomcat (language: en)/, 8443/open/tcp//ssl|http//Apache Tomcat (language: en)/	Ignored State: filtered (992)	Seq Index: 261	IP ID Seq: Incremental
+Host: 132.248.142.112 ()	Status: Up
+Host: 132.248.142.112 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 10.0/, 81/closed/tcp//hosts2-ns///, 113/closed/tcp//ident///, 443/open/tcp//ssl|https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 5432/closed/tcp//postgresql///, 8080/closed/tcp//http-proxy///, 8090/closed/tcp//opsmessaging///, 8443/closed/tcp//https-alt///	Ignored State: filtered (990)	Seq Index: 260	IP ID Seq: Incremental
+Host: 132.248.142.113 ()	Status: Up
+Host: 132.248.142.113 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 8.5/, 81/closed/tcp//hosts2-ns///, 113/closed/tcp//ident///, 443/open/tcp//ssl|https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 5432/closed/tcp//postgresql///, 8080/open/tcp//http//Jetty 9.2.14.v20151106/, 8090/open/tcp//ssl|opsmessaging?///, 8443/open/tcp//https-alt?///	Ignored State: filtered (990)	Seq Index: 262	IP ID Seq: Incremental
+Host: 132.248.142.127 ()	Status: Up
+Host: 132.248.142.127 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Gunicorn/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Gunicorn/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8080/closed/tcp//http-proxy///	Ignored State: filtered (993)	Seq Index: 260	IP ID Seq: All zeros
+Host: 132.248.142.189 ()	Status: Up
+Host: 132.248.142.189 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.9p1 Ubuntu 3ubuntu0.17 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.52 ((Ubuntu))/, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///	Ignored State: filtered (994)	Seq Index: 261	IP ID Seq: All zeros
+Host: 132.248.142.254 (router.cnb.unam.mx)	Status: Up
+Host: 132.248.142.254 (router.cnb.unam.mx)	Ports: 113/closed/tcp//ident///, 179/open/tcp//tcpwrapped///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///	Ignored State: filtered (996)	Seq Index: 258	IP ID Seq: Incremental
+# Nmap done at Tue Oct  6 09:22:00 2026 -- 256 IP addresses (38 hosts up) scanned in 772.74 seconds

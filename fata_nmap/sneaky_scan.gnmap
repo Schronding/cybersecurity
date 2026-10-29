@@ -1,0 +1,78 @@
+# Nmap 7.99 scan initiated Tue Oct  6 09:07:48 2026 as: nmap -sS -F -oA sneaky_scan 132.248.142.0/24
+Host: 132.248.142.3 (folio.inb.unam.mx)	Status: Up
+Host: 132.248.142.3 (folio.inb.unam.mx)	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.4 (bibloinb.inb.unam.mx)	Status: Up
+Host: 132.248.142.4 (bibloinb.inb.unam.mx)	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.5 ()	Status: Up
+Host: 132.248.142.5 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.6 (posgrado.inb.unam.mx)	Status: Up
+Host: 132.248.142.6 (posgrado.inb.unam.mx)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 113/closed/tcp//ident///, 443/open/tcp//https///, 548/open/tcp//afp///, 2000/open/tcp//cisco-sccp///, 2049/open/tcp//nfs///, 5060/open/tcp//sip///	Ignored State: filtered (90)
+Host: 132.248.142.11 (dbserver.inb.unam.mx)	Status: Up
+Host: 132.248.142.11 (dbserver.inb.unam.mx)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (96)
+Host: 132.248.142.12 ()	Status: Up
+Host: 132.248.142.12 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.13 (personal.inb.unam.mx)	Status: Up
+Host: 132.248.142.13 (personal.inb.unam.mx)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (95)
+Host: 132.248.142.14 ()	Status: Up
+Host: 132.248.142.14 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (96)
+Host: 132.248.142.17 ()	Status: Up
+Host: 132.248.142.17 ()	Ports: 22/open/tcp//ssh///, 389/open/tcp//ldap///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (96)
+Host: 132.248.142.21 ()	Status: Up
+Host: 132.248.142.21 ()	Ports: 22/open/tcp//ssh///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///, 5432/open/tcp//postgresql///	Ignored State: closed (96)
+Host: 132.248.142.22 ()	Status: Up
+Host: 132.248.142.22 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (96)
+Host: 132.248.142.23 (salva.inb.unam.mx)	Status: Up
+Host: 132.248.142.23 (salva.inb.unam.mx)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 3000/open/tcp//ppp///, 5060/open/tcp//sip///	Ignored State: closed (94)
+Host: 132.248.142.25 ()	Status: Up
+Host: 132.248.142.25 ()	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.33 ()	Status: Up
+Host: 132.248.142.33 ()	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.34 ()	Status: Up
+Host: 132.248.142.34 ()	Ports: 22/open/tcp//ssh///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (97)
+Host: 132.248.142.35 ()	Status: Up
+Host: 132.248.142.35 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 111/closed/tcp//rpcbind///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 548/open/tcp//afp///, 2000/open/tcp//cisco-sccp///, 2049/closed/tcp//nfs///, 5060/open/tcp//sip///	Ignored State: filtered (90)
+Host: 132.248.142.36 ()	Status: Up
+Host: 132.248.142.36 ()	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.37 (www.maestria.inb.unam.mx)	Status: Up
+Host: 132.248.142.37 (www.maestria.inb.unam.mx)	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.38 (www.visualizacion.inb.unam.mx)	Status: Up
+Host: 132.248.142.38 (www.visualizacion.inb.unam.mx)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 548/open/tcp//afp///, 2000/open/tcp//cisco-sccp///, 2049/open/tcp//nfs///, 5060/open/tcp//sip///	Ignored State: filtered (90)
+Host: 132.248.142.40 ()	Status: Up
+Host: 132.248.142.40 ()	Ports: 113/closed/tcp//ident///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (97)
+Host: 132.248.142.45 ()	Status: Up
+Host: 132.248.142.45 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.46 ()	Status: Up
+Host: 132.248.142.46 ()	Ports: 22/open/tcp//ssh///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (97)
+Host: 132.248.142.48 ()	Status: Up
+Host: 132.248.142.48 ()	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.49 ()	Status: Up
+Host: 132.248.142.49 ()	Ports: 22/open/tcp//ssh///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (97)
+Host: 132.248.142.51 ()	Status: Up
+Host: 132.248.142.51 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (95)
+Host: 132.248.142.53 ()	Status: Up
+Host: 132.248.142.53 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 3000/open/tcp//ppp///, 5060/open/tcp//sip///	Ignored State: closed (95)
+Host: 132.248.142.55 (penfield.inb.unam.mx)	Status: Up
+Host: 132.248.142.55 (penfield.inb.unam.mx)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.57 ()	Status: Up
+Host: 132.248.142.57 ()	Ports: 22/open/tcp//ssh///, 80/closed/tcp//http///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.60 ()	Status: Up
+Host: 132.248.142.60 ()	Ports: 22/open/tcp//ssh///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: closed (97)
+Host: 132.248.142.102 (correo.enesjuriquilla.unam.mx)	Status: Up
+Host: 132.248.142.102 (correo.enesjuriquilla.unam.mx)	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.103 ()	Status: Up
+Host: 132.248.142.103 ()	Ports: 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (95)
+Host: 132.248.142.108 ()	Status: Up
+Host: 132.248.142.108 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 2000/open/tcp//cisco-sccp///, 3306/open/tcp//mysql///, 5060/open/tcp//sip///	Ignored State: closed (95)
+Host: 132.248.142.111 (urm.inb.unam.mx)	Status: Up
+Host: 132.248.142.111 (urm.inb.unam.mx)	Ports: 80/closed/tcp//http///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///, 8080/open/tcp//http-proxy///, 8443/open/tcp//https-alt///	Ignored State: filtered (93)
+Host: 132.248.142.112 ()	Status: Up
+Host: 132.248.142.112 ()	Ports: 80/open/tcp//http///, 81/closed/tcp//hosts2-ns///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///, 5432/closed/tcp//postgresql///, 8080/closed/tcp//http-proxy///, 8443/closed/tcp//https-alt///	Ignored State: filtered (91)
+Host: 132.248.142.113 ()	Status: Up
+Host: 132.248.142.113 ()	Ports: 80/open/tcp//http///, 81/closed/tcp//hosts2-ns///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///, 5432/closed/tcp//postgresql///, 8080/open/tcp//http-proxy///, 8443/open/tcp//https-alt///	Ignored State: filtered (91)
+Host: 132.248.142.127 ()	Status: Up
+Host: 132.248.142.127 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/open/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///, 8080/closed/tcp//http-proxy///	Ignored State: filtered (93)
+Host: 132.248.142.189 ()	Status: Up
+Host: 132.248.142.189 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 113/closed/tcp//ident///, 443/closed/tcp//https///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (94)
+Host: 132.248.142.254 (router.cnb.unam.mx)	Status: Up
+Host: 132.248.142.254 (router.cnb.unam.mx)	Ports: 113/closed/tcp//ident///, 179/open/tcp//bgp///, 2000/open/tcp//cisco-sccp///, 5060/open/tcp//sip///	Ignored State: filtered (96)
+# Nmap done at Tue Oct  6 09:08:14 2026 -- 256 IP addresses (38 hosts up) scanned in 26.57 seconds

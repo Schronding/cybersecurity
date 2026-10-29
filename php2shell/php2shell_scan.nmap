@@ -1,0 +1,439 @@
+# Nmap 7.991 scan initiated Wed Oct 28 17:29:02 2026 as: nmap -p 80,443 --script nmap-php2shell-main/scripts/http-php2shell-version.nse -iL ips_web.txt -oA php2shell_scan
+Nmap scan report for 132.248.248.33
+Host is up (0.0040s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.57
+Host is up (0.0048s latency).
+
+PORT    STATE  SERVICE
+80/tcp  open   http
+443/tcp closed https
+
+Nmap scan report for 132.248.248.61
+Host is up (0.0032s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.62
+Host is up (0.0034s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.74
+Host is up (0.0039s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp closed https
+
+Nmap scan report for 132.248.248.87
+Host is up (0.0042s latency).
+
+PORT    STATE  SERVICE
+80/tcp  open   http
+443/tcp closed https
+
+Nmap scan report for 132.248.248.95
+Host is up (0.0045s latency).
+
+PORT    STATE    SERVICE
+80/tcp  filtered http
+443/tcp open     https
+
+Nmap scan report for liigh.unam.mx (132.248.248.101)
+Host is up (0.0038s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for app.liigh.unam.mx (132.248.248.102)
+Host is up (0.0038s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp open   https
+
+Nmap scan report for 132.248.248.103
+Host is up (0.0044s latency).
+
+PORT    STATE    SERVICE
+80/tcp  filtered http
+443/tcp closed   https
+
+Nmap scan report for 132.248.248.107
+Host is up (0.0044s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.112
+Host is up (0.0044s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.113
+Host is up (0.0034s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.115
+Host is up (0.0039s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+| http-php2shell-version: 
+|   VULNERABLE:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109618
+|     Risk factor: High  CVSS: 9.2
+|       PHP out-of-memory handling can interrupt request processing while internal
+|       request data is only partially initialized. Cleanup may then treat invalid data
+|       as valid, potentially resulting in unauthenticated remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 7.3.33
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|   
+|   PHP CVE-2026-109619 - RCE via stale global state
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109619
+|     Risk factor: High  CVSS: 9.2
+|       Request-owned internal state can survive after its backing memory has been
+|       freed. A later request handled by the same worker may use stale state before
+|       normal initialization resets it, potentially resulting in unauthenticated
+|       remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 7.3.33
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619
+
+Nmap scan report for 132.248.248.121
+Host is up (0.0039s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.128
+Host is up (0.0040s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+| http-php2shell-version: 
+|   VULNERABLE:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109618
+|     Risk factor: High  CVSS: 9.2
+|       PHP out-of-memory handling can interrupt request processing while internal
+|       request data is only partially initialized. Cleanup may then treat invalid data
+|       as valid, potentially resulting in unauthenticated remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 2.9.5
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: HTTP response body
+|       Confidence: HIGH
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|   
+|   PHP CVE-2026-109619 - RCE via stale global state
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109619
+|     Risk factor: High  CVSS: 9.2
+|       Request-owned internal state can survive after its backing memory has been
+|       freed. A later request handled by the same worker may use stale state before
+|       normal initialization resets it, potentially resulting in unauthenticated
+|       remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 2.9.5
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: HTTP response body
+|       Confidence: HIGH
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619
+
+Nmap scan report for 132.248.248.131
+Host is up (0.0037s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.137
+Host is up (0.0035s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.138
+Host is up (0.0041s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.152
+Host is up (0.0041s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+| http-php2shell-version: 
+|   VULNERABLE:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109618
+|     Risk factor: High  CVSS: 9.2
+|       PHP out-of-memory handling can interrupt request processing while internal
+|       request data is only partially initialized. Cleanup may then treat invalid data
+|       as valid, potentially resulting in unauthenticated remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 5.4.16
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: Server
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|   
+|   PHP CVE-2026-109619 - RCE via stale global state
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109619
+|     Risk factor: High  CVSS: 9.2
+|       Request-owned internal state can survive after its backing memory has been
+|       freed. A later request handled by the same worker may use stale state before
+|       normal initialization resets it, potentially resulting in unauthenticated
+|       remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 5.4.16
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: Server
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619
+
+Nmap scan report for 132.248.248.153
+Host is up (0.0034s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.154
+Host is up (0.0049s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.157
+Host is up (0.0048s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.158
+Host is up (0.0046s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.159
+Host is up (0.0047s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for lavis.unam.mx (132.248.248.165)
+Host is up (0.0049s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.168
+Host is up (0.0045s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.169
+Host is up (0.0064s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for kneipe.lavis.unam.mx (132.248.248.175)
+Host is up (0.0044s latency).
+
+PORT    STATE  SERVICE
+80/tcp  closed http
+443/tcp open   https
+| http-php2shell-version: 
+|   VULNERABLE:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109618
+|     Risk factor: High  CVSS: 9.2
+|       PHP out-of-memory handling can interrupt request processing while internal
+|       request data is only partially initialized. Cleanup may then treat invalid data
+|       as valid, potentially resulting in unauthenticated remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 8.0.30
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|   
+|   PHP CVE-2026-109619 - RCE via stale global state
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2026-109619
+|     Risk factor: High  CVSS: 9.2
+|       Request-owned internal state can survive after its backing memory has been
+|       freed. A later request handled by the same worker may use stale state before
+|       normal initialization resets it, potentially resulting in unauthenticated
+|       remote code execution.
+|     Disclosure date: 2026-10-21
+|     Check results:
+|       Observed PHP version: 8.0.30
+|       Upstream fixed version: No upstream fixed release for this EOL branch
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|     Extra information:
+|       Upstream severity: CRITICAL - CVSS v4.0 9.2
+|       Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.
+|       This script does not attempt exploitation or intrusive multipart probing.
+|     References:
+|       https://www.php.net/archive/2026.php#2026-10-21-5
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619
+
+Nmap scan report for 132.248.248.177
+Host is up (0.0042s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.232
+Host is up (0.0050s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.233
+Host is up (0.0050s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.239
+Host is up (0.0039s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.248
+Host is up (0.0039s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 132.248.248.249
+Host is up (0.0043s latency).
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Wed Oct 28 17:29:59 2026 -- 36 IP addresses (35 hosts up) scanned in 57.45 seconds

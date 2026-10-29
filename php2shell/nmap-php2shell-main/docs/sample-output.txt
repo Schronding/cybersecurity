@@ -1,0 +1,45 @@
+Example lab command:
+
+nmap -Pn -sV -p 8080,8081 --script http-php2shell-version --script-args vulns.showall 192.0.2.10
+
+Expected logical result:
+
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    Apache httpd
+| http-php2shell-version:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: LIKELY VULNERABLE
+|     IDs: CVE:CVE-2026-109618
+|     Risk factor: High
+|     Check results:
+|       Observed PHP version: 8.3.35
+|       Upstream fixed version: 8.3.36
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Detected path: /
+|       Assessment method: remote version comparison only
+|   PHP CVE-2026-109619 - RCE via stale global state
+|     State: LIKELY VULNERABLE
+|_    [same version evidence]
+
+8081/tcp open  http    Apache httpd
+| http-php2shell-version:
+|   PHP CVE-2026-109618 - RCE via OOM corruption
+|     State: NOT VULNERABLE
+|     Check results:
+|       Observed PHP version: 8.3.36
+|       Upstream fixed version: 8.3.36
+|       Evidence source: X-Powered-By
+|       Confidence: MEDIUM
+|       Assessment method: remote version comparison only
+|   PHP CVE-2026-109619 - RCE via stale global state
+|_    State: NOT VULNERABLE
+
+Notes:
+
+- Exact whitespace and formatting are controlled by the installed Nmap version.
+- NOT VULNERABLE entries require --script-args vulns.showall.
+- A LIKELY VULNERABLE result is version-based, not exploit confirmation.
+- Distribution or LTS vendor backports can make an apparently old upstream
+  version non-vulnerable; verify the installed package before remediation or
+  reporting conclusions are finalized.

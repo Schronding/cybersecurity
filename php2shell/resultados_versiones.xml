@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///nix/store/3273j67a71nam8bqdhk8gxv08j22lf0y-nmap-7.991/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Wed Oct 28 16:56:04 2026 as: nmap -sV -&#45;script=http-headers,http-enum -p 80,443,8080,8443,8888 -iL ips_web.txt -oX resultados_versiones.xml -->
+<nmaprun scanner="nmap" args="nmap -sV -&#45;script=http-headers,http-enum -p 80,443,8080,8443,8888 -iL ips_web.txt -oX resultados_versiones.xml" start="1793228164" startstr="Wed Oct 28 16:56:04 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="5" services="80,443,8080,8443,8888"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.62" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.102" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.131" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.138" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.154" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.169" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.232" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.87" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.233" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.249" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.107" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.128" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.121" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.239" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.159" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.177" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.165" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="NSE" time="1793228643" percent="99.21" remaining="2" etc="1793228645"/>
+<taskprogress task="NSE" time="1793229531" percent="99.97" remaining="0" etc="1793229531"/>
+<taskprogress task="NSE" time="1793229537" percent="99.97" remaining="0" etc="1793229537"/>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Kyocera MFP httpd" version="0.0.1" devicetype="printer" method="probed" conf="10"/><script id="http-server-header" output="KM-MFP-http/V0.0.1"><elem>KM-MFP-http/V0.0.1</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="5007" rttvar="1990" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="RapidLogic httpd" version="1.1" extrainfo="Sharp MX-2700N printer" devicetype="printer" method="probed" conf="10"><cpe>cpe:/a:rapidlogic:httpd:1.1</cpe><cpe>cpe:/h:sharp:mx-2700n</cpe></service><script id="http-server-header" output="&#xa;  Rapid Logic/1.1&#xa;  RapidLogic/1.1"><elem>Rapid Logic/1.1</elem>
+<elem>RapidLogic/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6023" rttvar="4383" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229666"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-headers" output="&#xa;  Server: nginx/1.18.0 (Ubuntu)&#xa;  Date: Wed, 28 Oct 2026 23:00:06 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 612&#xa;  Last-Modified: Thu, 15 Oct 2020 18:57:24 GMT&#xa;  Connection: close&#xa;  ETag: &quot;5f889b94-264&quot;&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3609" rttvar="3321" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229668"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.62" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 22:59:56 GMT&#xa;  Server: Apache&#xa;  Server-Timing: includeElements;dur=5.52;desc=&quot;&quot;&#xa;  Set-Cookie: PHPSESSID=28stgqe74qecatlcfsj98dkv25; path=/&#xa;  Expires: Thu, 19 Nov 1981 08:52:00 GMT&#xa;  Cache-Control: no-store, no-cache, must-revalidate&#xa;  Pragma: no-cache&#xa;  Server-Timing: captureWpOutputInit;dur=0.75;desc=&quot;&quot;&#xa;  Set-Cookie: breakdance_view_count=1&#xa;  Set-Cookie: breakdance_session_count=1&#xa;  Set-Cookie: breakdance_last_session_id=28stgqe74qecatlcfsj98dkv25&#xa;  X-Redirect-By: WordPress&#xa;  Location: https://www.campusjuriquilla.unam.mx/&#xa;  Content-Length: 0&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /wp-json: Possible admin folder&#xa;  /robots.txt: Robots file&#xa;  /readme.html: Wordpress version: 2 &#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;  /0/: Potentially interesting folder&#xa;  /servicios/: Potentially interesting folder&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3321" rttvar="2564" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="HP LaserJet CP1205nw or P1606 http config" devicetype="printer" method="probed" conf="10"><cpe>cpe:/h:hp:laserjet_p1606</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="HP LaserJet CP1205nw or P1606 http config" devicetype="printer" method="probed" conf="10"><cpe>cpe:/h:hp:laserjet_p1606</cpe></service></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4204" rttvar="1749" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229665"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.87" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Knopflerfish httpd" method="probed" conf="10"/><script id="http-server-header" output="The Knopflerfish HTTP Server"><elem>The Knopflerfish HTTP Server</elem>
+</script></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4968" rttvar="1769" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.101" addrtype="ipv4"/>
+<hostnames>
+<hostname name="liigh.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:08 GMT&#xa;  Server: Apache&#xa;  Link: &lt;https://liigh.unam.mx/wp-json/&gt;; rel=&quot;https://api.w.org/&quot;, &lt;https://liigh.unam.mx/wp-json/wp/v2/pages/1879&gt;; rel=&quot;alternate&quot;; type=&quot;application/json&quot;, &lt;https://liigh.unam.mx/&gt;; rel=shortlink&#xa;  X-TEC-API-VERSION: v1&#xa;  X-TEC-API-ROOT: https://liigh.unam.mx/wp-json/tribe/events/v1/&#xa;  X-TEC-API-ORIGIN: https://liigh.unam.mx&#xa;  Strict-Transport-Security: max-age=4838400; includeSubdomains;&#xa;  X-Permitted-Cross-Domain-Policies: strict-origin&#xa;  Permissions-Policy: geolocation=(none), notifications =(none), microphone =(none), camera= (none),payment =(none)&#xa;  Vary: Accept-Encoding,User-Agent&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  X-Content-Type-Options: nosniff&#xa;  Referrer-Policy: no-referrer-when-downgrade&#xa;  Connection: close&#xa;  Transfer-Encoding: chunked&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3454" rttvar="3187" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.102" addrtype="ipv4"/>
+<hostnames>
+<hostname name="app.liigh.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.7</cpe></service><script id="http-server-header" output="Apache/2.4.7 (Ubuntu)"><elem>Apache/2.4.7 (Ubuntu)</elem>
+</script><script id="http-enum" output="&#xa;  /: Root directory w/ listing on &apos;apache/2.4.7 (ubuntu)&apos;&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.7" hostname="app.liigh.unam.mx" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.7</cpe></service><script id="http-server-header" output="Apache/2.4.7 (Ubuntu)"><elem>Apache/2.4.7 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="3845" rttvar="2303" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Segger embOS/IP httpd" method="probed" conf="10"><cpe>cpe:/a:segger:embos%2fip</cpe></service><script id="http-server-header" output="embOS/IP"><elem>embOS/IP</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3469" rttvar="2262" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229659"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.107" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.5.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.5.8" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:17 GMT&#xa;  Server: Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8&#xa;  Last-Modified: Fri, 12 Dec 2025 19:34:58 GMT&#xa;  ETag: &quot;1dc4-645c65b4edc80&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 7620&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script><script id="http-enum" output="&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /scripts/: Potentially interesting folder w/ directory listing&#xa;  /support/: Potentially interesting folder&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3928" rttvar="2999" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="127.0.0.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:00 GMT&#xa;  Server: Apache/2.4.41 (Ubuntu)&#xa;  Set-Cookie: OSTSESSID=9hma2rhrp947ha4n58uufaa0p6; expires=Thu, 29-Oct-2026 23:00:00 GMT; Max-Age=86400; path=/; secure; HttpOnly&#xa;  Expires: Thu, 19 Nov 1981 08:52:00 GMT&#xa;  Cache-Control: no-store, no-cache, must-revalidate&#xa;  Pragma: no-cache&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;;&#xa;  Content-Language: es-ES&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-enum" output="&#xa;  /account.php: Possible admin folder&#xa;  /phpinfo.php: Possible information file&#xa;  /apps/: Potentially interesting directory w/ listing on &apos;apache/2.4.41 (ubuntu)&apos;&#xa;  /css/: Potentially interesting directory w/ listing on &apos;apache/2.4.41 (ubuntu)&apos;&#xa;  /images/: Potentially interesting directory w/ listing on &apos;apache/2.4.41 (ubuntu)&apos;&#xa;  /js/: Potentially interesting directory w/ listing on &apos;apache/2.4.41 (ubuntu)&apos;&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3843" rttvar="2998" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229656"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-enum" output="&#xa;  /apps/: Potentially interesting directory w/ listing on &apos;apache/2.4.41 (ubuntu)&apos;&#xa;"/><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:01:26 GMT&#xa;  Server: Apache/2.4.41 (Ubuntu)&#xa;  Last-Modified: Tue, 17 Dec 2024 16:30:40 GMT&#xa;  ETag: &quot;2aa6-62979d158e8b5&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 10918&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="2851" rttvar="4441" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 22:59:46 GMT&#xa;  Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.3.33&#xa;  X-Powered-By: PHP/7.3.33&#xa;  Expires: Wed, 11 Jan 1984 05:00:00 GMT&#xa;  Cache-Control: no-cache, must-revalidate, max-age=0&#xa;  Content-Length: 2527&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-enum" output="&#xa;  /robots.txt: Robots file&#xa;  /info.php: Possible information file&#xa;  /readme.html: Wordpress version: 2 &#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /readme.html: Interesting, a readme.&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="host-unreach" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3274" rttvar="3376" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.121" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.29" hostname="127.0.0.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:02:37 GMT&#xa;  Server: Apache/2.4.29 (Ubuntu)&#xa;  X-Redirect-By: Moodle&#xa;  Location: https://app1.lcgej.unam.mx&#xa;  Content-Language: es-mx&#xa;  Content-Length: 473&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script><script id="http-enum" output="&#xa;  /backup/: Backup folder w/ directory listing&#xa;  /rss/: RSS or Atom feed&#xa;  /admin/environment.xml: Moodle files&#xa;  /lib/db/install.xml: Moodle db installation file&#xa;  /lib/thirdpartylibs.xml: Moodle thirdpartylibs.xml&#xa;  /local/readme.txt: Moodle local/readme.txt&#xa;  /README.txt: Interesting, a readme.&#xa;  /auth/: Potentially interesting folder&#xa;  /cache/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /img/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /info/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /install/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /lib/: Potentially interesting folder&#xa;  /local/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /mod/: Potentially interesting folder&#xa;  /privacy/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;  /report/: Potentially interesting directory w/ listing on &apos;apache/2.4.29 (ubuntu)&apos;&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4357" rttvar="2889" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229656"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.128" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="localhost" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:46 GMT&#xa;  Server: Apache/2.4.41 (Ubuntu)&#xa;  Link: &lt;https://mexpd.liigh.unam.mx/index.php?rest_route=/&gt;; rel=&quot;https://api.w.org/&quot;&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /readme.html: Wordpress version: 2 &#xa;  /: WordPress version: 7.1.4&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4022" rttvar="2498" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.131" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="127.0.1.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:31 GMT&#xa;  Server: Apache/2.4.41 (Ubuntu)&#xa;  Link: &lt;https://enfermedadesraras.liigh.unam.mx/index.php?rest_route=/&gt;; rel=&quot;https://api.w.org/&quot;&#xa;  Link: &lt;https://enfermedadesraras.liigh.unam.mx/index.php?rest_route=/wp/v2/pages/15&gt;; rel=&quot;alternate&quot;; title=&quot;JSON&quot;; type=&quot;application/json&quot;&#xa;  Link: &lt;https://enfermedadesraras.liigh.unam.mx/&gt;; rel=shortlink&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /readme.html: Wordpress version: 2 &#xa;  /: WordPress version: 7.1.4&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="5326" rttvar="2966" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229656"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" hostname="127.0.1.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" extrainfo="(Ubuntu)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 22:59:43 GMT&#xa;  Server: Apache/2.4.52 (Ubuntu)&#xa;  Vary: Cookie&#xa;  Set-Cookie: DokuWiki=erb1798t9igusqup3gnlhrh0f8; path=/; secure; HttpOnly; SameSite=Lax&#xa;  Expires: Thu, 19 Nov 1981 08:52:00 GMT&#xa;  Cache-Control: no-store, no-cache, must-revalidate&#xa;  Pragma: no-cache&#xa;  Set-Cookie: DW7fa065a06cb74b536c124cfbe56ac6d3=deleted; expires=Thu, 01 Jan 1970 00:00:01 GMT; Max-Age=0; path=/; secure; HttpOnly; SameSite=Lax&#xa;  Location: /doku.php?id=start&#xa;  Content-Length: 0&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script><script id="http-enum" output="&#xa;  /README: Interesting, a readme.&#xa;  /lib/: Potentially interesting folder&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="2970" rttvar="4176" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.138" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="127.0.1.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="mendvar.liigh.unam.mx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:32 GMT&#xa;  Server: Apache/2.4.41 (Ubuntu)&#xa;  Content-Length: 381&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=iso-8859-1&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4882" rttvar="2540" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service><script id="http-server-header" output="Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16"><elem>Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16</elem>
+</script><script id="http-enum" output="&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:03:15 GMT&#xa;  Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16&#xa;  Last-Modified: Tue, 29 Sep 2026 00:21:41 GMT&#xa;  ETag: &quot;e3f7-65c942ab5225e&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 58359&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6298" rttvar="4928" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /wp-json: Possible admin folder&#xa;  /logs/: Logs&#xa;  /robots.txt: Robots file&#xa;  /readme.html: Wordpress version: 2 &#xa;  /feed/: Wordpress version: 6.9.9&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;  /0/: Potentially interesting folder&#xa;  /es/: Potentially interesting folder&#xa;  /home/: Potentially interesting folder&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:07:23 GMT&#xa;  Server: Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k&#xa;  X-Powered-By: PHP/8.5.12&#xa;  X-Redirect-By: WordPress&#xa;  Location: https://slugatlas.lavis.unam.mx/&#xa;  Content-Length: 0&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6503" rttvar="4396" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.154" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" hostname="127.0.1.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6493" rttvar="4368" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script><script id="http-headers" output="&#xa;  Server: nginx/1.18.0 (Ubuntu)&#xa;  Date: Wed, 28 Oct 2026 22:59:29 GMT&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Connection: close&#xa;  X-XSS-Protection: 1&#xa;  X-Content-Type-Options: nosniff&#xa;  X-Frame-Options: sameorigin&#xa;  Content-Security-Policy: default-src &apos;self&apos; https://cdn.zapier.com; connect-src *; font-src &apos;self&apos; https://cdn.zapier.com data:; frame-src *; img-src * data: blob:; media-src * data:; script-src &apos;self&apos; &apos;unsafe-eval&apos; &apos;sha256-jqxtvDkBbRAl9Hpqv68WdNOieepg8tJSYu1xIy7zT34=&apos; &apos;sha256-aui5xYk3Lu1dQcnsPlNZI+qDTdfzdUv3fzsw80VLJgw=&apos; https://cdn.zapier.com https://zapier.com; style-src &apos;self&apos; &apos;unsafe-inline&apos; https://cdn.zapier.com&#xa;  X-Instance-ID: eb3d8b95-913e-41a4-b6cb-ce3964a58de6&#xa;  X-Powered-By: Express&#xa;  Access-Control-Allow-Origin: *&#xa;  Vary: Accept-Encoding&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6171" rttvar="4827" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229660"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:02:36 GMT&#xa;  Server: Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k&#xa;  X-Powered-By: PHP/8.5.12&#xa;  Link: &lt;https://varelab.lavis.unam.mx/index.php?rest_route=/&gt;; rel=&quot;https://api.w.org/&quot;, &lt;https://varelab.lavis.unam.mx/index.php?rest_route=/wp/v2/pages/67&gt;; rel=&quot;alternate&quot;; title=&quot;JSON&quot;; type=&quot;application/json&quot;, &lt;https://varelab.lavis.unam.mx/&gt;; rel=shortlink&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-enum" output="&#xa;  /wordpress/: Blog&#xa;  /wp-login.php: Possible admin folder&#xa;  /readme.html: Wordpress version: 2 &#xa;  /: WordPress version: 6.9.9&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wordpress/wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="6082" rttvar="4923" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229659"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.159" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /wp-json: Possible admin folder&#xa;  /robots.txt: Robots file&#xa;  /readme.html: Wordpress version: 2 &#xa;  /feed/: Wordpress version: 6.9.9&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;  /0/: Potentially interesting folder&#xa;  /home/: Potentially interesting folder&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:02:29 GMT&#xa;  Server: Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k&#xa;  X-Powered-By: PHP/8.5.12&#xa;  X-Redirect-By: WordPress&#xa;  Location: https://limaco.lavis.unam.mx/&#xa;  Content-Length: 0&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: GET)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3290" rttvar="3140" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229660"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.165" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lavis.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.63" extrainfo="(Rocky Linux) OpenSSL/3.5.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.63</cpe></service><script id="http-server-header" output="Apache/2.4.63 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.63 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.63" extrainfo="(Rocky Linux) OpenSSL/3.5.8" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.63</cpe></service><script id="http-server-header" output="Apache/2.4.63 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.63 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:03:09 GMT&#xa;  Server: Apache/2.4.63 (Rocky Linux) OpenSSL/3.5.8&#xa;  Last-Modified: Tue, 27 Oct 2026 02:38:34 GMT&#xa;  ETag: &quot;3401-65ec957c9eb30&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 13313&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-enum" output="&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /servicios/: Potentially interesting folder&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3892" rttvar="3115" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229656"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.0.7" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.0.7"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.0.7</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.0.7" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.0.7"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.0.7</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="5589" rttvar="4309" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.169" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.37" extrainfo="(Rocky Linux) OpenSSL/1.1.1k" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.37</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 22:59:51 GMT&#xa;  Server: Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k&#xa;  Last-Modified: Thu, 13 Nov 2025 23:33:51 GMT&#xa;  ETag: &quot;3109-64382503e7ce2&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 12553&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-enum" output="&#xa;  /examples/: Sample scripts&#xa;  /test/: Test page&#xa;  /contact/: Potentially interesting folder&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /prueba/: Potentially interesting folder&#xa;"/><script id="http-server-header" output="Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k"><elem>Apache/2.4.37 (Rocky Linux) OpenSSL/1.1.1k</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="5624" rttvar="3319" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229660"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.175" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kneipe.lavis.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.5.8" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script><script id="http-enum" output="&#xa;  /css/: Potentially interesting folder w/ directory listing&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /img/: Potentially interesting folder w/ directory listing&#xa;  /js/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:00:17 GMT&#xa;  Server: Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8&#xa;  X-Powered-By: PHP/8.0.30&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3500" rttvar="2173" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229657"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.177" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.5.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.62" extrainfo="(Rocky Linux) OpenSSL/3.5.8" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.62</cpe></service><script id="http-headers" output="&#xa;  Date: Wed, 28 Oct 2026 23:01:30 GMT&#xa;  Server: Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8&#xa;  X-Powered-By: PHP/8.2.35&#xa;  X-Matomo-Request-Id: a2131&#xa;  Cache-Control: no-store, must-revalidate&#xa;  X-Frame-Options: sameorigin&#xa;  Referrer-Policy: same-origin&#xa;  Content-Security-Policy: default-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;; img-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; data:;&#xa;  Set-Cookie: MATOMO_SESSID=qtbolbe0dl6vi48ucrputuoos4; path=/; secure; HttpOnly; SameSite=Lax&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=utf-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-server-header" output="Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8"><elem>Apache/2.4.62 (Rocky Linux) OpenSSL/3.5.8</elem>
+</script><script id="http-enum" output="&#xa;  /robots.txt: Robots file&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /js/: Potentially interesting folder&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3609" rttvar="2520" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229687"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.232" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" servicefp="SF-Port80-TCP:V=7.991%I=7%D=10/28%Time=6AE27DA3%P=x86_64-pc-linux-gnu%r(GetRequest,293,&quot;HTTP/1\.0\x20200\x20OK\r\nVary:\x20Accept-Encoding\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Type:\x20text/html\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Wed,\x2028\x20Oct\x202026\x2016:47:08\x20GMT\r\nETag:\x201778171692\r\nContent-Length:\x20334\r\nX-XSS-Protection:\x201;\x20mode=block\r\nLast-Modified:\x20Wed,\x2022\x20Jun\x202022\x2007:46:33\x20GMT\r\nConnection:\x20close\r\nAccept-Ranges:\x20bytes\r\n\r\n&lt;!doctype\x20html&gt;&lt;html&gt;&lt;head&gt;&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;&lt;meta\x20http-equiv=\&quot;pragma\&quot;\x20content=\&quot;no-cache\&quot;&gt;&lt;meta\x20http-equiv=\&quot;cache-control\&quot;\x20content=\&quot;no-cache,\x20must-revalidate\&quot;&gt;&lt;meta\x20http-equiv=\&quot;expires\&quot;\x20content=\&quot;0\&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;script&gt;document\.location\.href\x20=\x20\&quot;/doc/index\.html\&quot;;&lt;/script&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,21F,&quot;HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nVary:\x20Accept-Encoding\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Type:\x20text/html\r\nX-Content-Type-Options:\x20nosniff\r\nDate:\x20Wed,\x2028\x20Oct\x202026\x2016:47:08\x20GMT\r\nCache-Control:\x20no-cache\r\nContent-Length:\x20241\r\nX-XSS-Protection:\x201;\x20mode=block\r\nConnection:\x20close\r\nAccept-Ranges:\x20bytes\r\n\r\n&lt;!DOCTYPE\x20html&gt;\r\n&lt;head&gt;\r\n\x20\x20\x20\x20&lt;title&gt;Method\x20Not\x20Allowed&lt;/title&gt;\r\n\x20\x20\x20\x20&lt;link\x20rel=\&quot;shortcut\x20icon\&quot;\x20href=\&quot;data:image/x-icon;,\&quot;\x20type=\&quot;image/x-icon\&quot;&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;h2&gt;Access\x20Error:\x20405\x20-&#45;\x20Method\x20Not\x20Allowed&lt;/h2&gt;\r\n&lt;pre&gt;&lt;/pre&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Vary: Accept-Encoding&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Wed, 28 Oct 2026 16:47:08 GMT&#xa;    ETag: 1778171692&#xa;    Content-Length: 334&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Last-Modified: Wed, 22 Jun 2022 07:46:33 GMT&#xa;    Connection: close&#xa;    Accept-Ranges: bytes&#xa;    &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache, must-revalidate&quot;&gt;&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;script&gt;document.location.href = &quot;/doc/index.html&quot;;&lt;/script&gt;&lt;/html&gt;&#xa;  HTTPOptions: &#xa;    HTTP/1.0 405 Method Not Allowed&#xa;    Vary: Accept-Encoding&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Wed, 28 Oct 2026 16:47:08 GMT&#xa;    Cache-Control: no-cache&#xa;    Content-Length: 241&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Connection: close&#xa;    Accept-Ranges: bytes&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Method Not Allowed&lt;/title&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;data:image/x-icon;,&quot; type=&quot;image/x-icon&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h2&gt;Access Error: 405 -&#45; Method Not Allowed&lt;/h2&gt;&#xa;    &lt;pre&gt;&lt;/pre&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;"><elem key="GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Vary: Accept-Encoding&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Wed, 28 Oct 2026 16:47:08 GMT&#xa;    ETag: 1778171692&#xa;    Content-Length: 334&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Last-Modified: Wed, 22 Jun 2022 07:46:33 GMT&#xa;    Connection: close&#xa;    Accept-Ranges: bytes&#xa;    &lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache, must-revalidate&quot;&gt;&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;script&gt;document.location.href = &quot;/doc/index.html&quot;;&lt;/script&gt;&lt;/html&gt;</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 405 Method Not Allowed&#xa;    Vary: Accept-Encoding&#xa;    X-Frame-Options: SAMEORIGIN&#xa;    Content-Type: text/html&#xa;    X-Content-Type-Options: nosniff&#xa;    Date: Wed, 28 Oct 2026 16:47:08 GMT&#xa;    Cache-Control: no-cache&#xa;    Content-Length: 241&#xa;    X-XSS-Protection: 1; mode=block&#xa;    Connection: close&#xa;    Accept-Ranges: bytes&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;title&gt;Method Not Allowed&lt;/title&gt;&#xa;    &lt;link rel=&quot;shortcut icon&quot; href=&quot;data:image/x-icon;,&quot; type=&quot;image/x-icon&quot;&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h2&gt;Access Error: 405 -&#45; Method Not Allowed&lt;/h2&gt;&#xa;    &lt;pre&gt;&lt;/pre&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" tunnel="ssl" method="probed" conf="10"/><script id="http-enum" output="&#xa;  /picts/BC_bwlogorev.gif: BlueCoat Reporter (401 Unauthorized)&#xa;  /picts/menu_leaf.gif: BlueCoat Reporter (401 Unauthorized)&#xa;  /pictures/buttons/file_view_mark.gif: AXIS StorPoint (401 Unauthorized)&#xa;  /fileadmin/: Potentially interesting folder (401 Unauthorized)&#xa;  /file/: Potentially interesting folder (401 Unauthorized)&#xa;  /filemanager/: Potentially interesting folder (401 Unauthorized)&#xa;  /files/: Potentially interesting folder (401 Unauthorized)&#xa;  /pics/: Potentially interesting folder (401 Unauthorized)&#xa;  /pictures/: Potentially interesting folder (401 Unauthorized)&#xa;"/><script id="http-headers" output="&#xa;  Vary: Accept-Encoding&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  Content-Type: text/html&#xa;  X-Content-Type-Options: nosniff&#xa;  Date: Wed, 28 Oct 2026 16:50:46 GMT&#xa;  ETag: 1778171692&#xa;  Content-Length: 334&#xa;  X-XSS-Protection: 1; mode=block&#xa;  Last-Modified: Wed, 22 Jun 2022 07:46:33 GMT&#xa;  Connection: close&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4574" rttvar="2418" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229658"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.233" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-headers" output="&#xa;  Server: nginx&#xa;  Date: Wed, 28 Oct 2026 23:01:41 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 494&#xa;  Last-Modified: Mon, 24 Mar 2025 20:31:14 GMT&#xa;  Connection: close&#xa;  ETag: &quot;67e1c112-1ee&quot;&#xa;  Cache-Control: no-cache&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="5072" rttvar="2381" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229667"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.239" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="3183" rttvar="2927" to="100000"/>
+</host>
+<host starttime="1793228166" endtime="1793229666"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="host-unreach" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="65908" rttvar="125860" to="569348"/>
+</host>
+<host starttime="1793228166" endtime="1793229667"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.249" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="4791" rttvar="3065" to="100000"/>
+</host>
+<runstats><finished time="1793229687" timestr="Wed Oct 28 17:21:27 2026" summary="Nmap done at Wed Oct 28 17:21:27 2026; 36 IP addresses (34 hosts up) scanned in 1522.79 seconds" elapsed="1522.79" exit="success"/><hosts up="34" down="2" total="36"/>
+</runstats>
+</nmaprun>

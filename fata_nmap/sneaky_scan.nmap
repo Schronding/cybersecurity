@@ -1,0 +1,400 @@
+# Nmap 7.99 scan initiated Tue Oct  6 09:07:48 2026 as: nmap -sS -F -oA sneaky_scan 132.248.142.0/24
+Nmap scan report for folio.inb.unam.mx (132.248.142.3)
+Host is up (0.0032s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for bibloinb.inb.unam.mx (132.248.142.4)
+Host is up (0.0030s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.5
+Host is up (0.0039s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for posgrado.inb.unam.mx (132.248.142.6)
+Host is up (0.0030s latency).
+Not shown: 90 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+80/tcp   open   http
+111/tcp  open   rpcbind
+113/tcp  closed ident
+443/tcp  open   https
+548/tcp  open   afp
+2000/tcp open   cisco-sccp
+2049/tcp open   nfs
+5060/tcp open   sip
+
+Nmap scan report for dbserver.inb.unam.mx (132.248.142.11)
+Host is up (0.0046s latency).
+Not shown: 96 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.12
+Host is up (0.0035s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for personal.inb.unam.mx (132.248.142.13)
+Host is up (0.0041s latency).
+Not shown: 95 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.14
+Host is up (0.0048s latency).
+Not shown: 96 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.17
+Host is up (0.0030s latency).
+Not shown: 96 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+389/tcp  open  ldap
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.21
+Host is up (0.0058s latency).
+Not shown: 96 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+5432/tcp open  postgresql
+
+Nmap scan report for 132.248.142.22
+Host is up (0.0035s latency).
+Not shown: 96 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for salva.inb.unam.mx (132.248.142.23)
+Host is up (0.0065s latency).
+Not shown: 94 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+2000/tcp open  cisco-sccp
+3000/tcp open  ppp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.25
+Host is up (0.0025s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.33
+Host is up (0.0034s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.34
+Host is up (0.0039s latency).
+Not shown: 97 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.35
+Host is up (0.021s latency).
+Not shown: 90 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+80/tcp   open   http
+111/tcp  closed rpcbind
+113/tcp  closed ident
+443/tcp  closed https
+548/tcp  open   afp
+2000/tcp open   cisco-sccp
+2049/tcp closed nfs
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.36
+Host is up (0.011s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for www.maestria.inb.unam.mx (132.248.142.37)
+Host is up (0.012s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for www.visualizacion.inb.unam.mx (132.248.142.38)
+Host is up (0.0034s latency).
+Not shown: 90 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+80/tcp   open   http
+111/tcp  open   rpcbind
+113/tcp  closed ident
+443/tcp  closed https
+548/tcp  open   afp
+2000/tcp open   cisco-sccp
+2049/tcp open   nfs
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.40
+Host is up (0.027s latency).
+Not shown: 97 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+113/tcp  closed ident
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.45
+Host is up (0.014s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.46
+Host is up (0.0028s latency).
+Not shown: 97 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.48
+Host is up (0.0097s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.49
+Host is up (0.0032s latency).
+Not shown: 97 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.51
+Host is up (0.0031s latency).
+Not shown: 95 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for 132.248.142.53
+Host is up (0.0032s latency).
+Not shown: 95 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+3000/tcp open  ppp
+5060/tcp open  sip
+
+Nmap scan report for penfield.inb.unam.mx (132.248.142.55)
+Host is up (0.0068s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.57
+Host is up (0.012s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   closed http
+113/tcp  closed ident
+443/tcp  closed https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.60
+Host is up (0.0027s latency).
+Not shown: 97 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap scan report for correo.enesjuriquilla.unam.mx (132.248.142.102)
+Host is up (0.014s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.103
+Host is up (0.0044s latency).
+Not shown: 95 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for 132.248.142.108
+Host is up (0.0031s latency).
+Not shown: 95 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+3306/tcp open  mysql
+5060/tcp open  sip
+
+Nmap scan report for urm.inb.unam.mx (132.248.142.111)
+Host is up (0.0037s latency).
+Not shown: 91 filtered tcp ports (no-response), 2 filtered tcp ports (admin-prohibited)
+PORT     STATE  SERVICE
+80/tcp   closed http
+113/tcp  closed ident
+443/tcp  closed https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap scan report for 132.248.142.112
+Host is up (0.0031s latency).
+Not shown: 91 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+81/tcp   closed hosts2-ns
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+5432/tcp closed postgresql
+8080/tcp closed http-proxy
+8443/tcp closed https-alt
+
+Nmap scan report for 132.248.142.113
+Host is up (0.0056s latency).
+Not shown: 91 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+80/tcp   open   http
+81/tcp   closed hosts2-ns
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+5432/tcp closed postgresql
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap scan report for 132.248.142.127
+Host is up (0.0032s latency).
+Not shown: 93 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+8080/tcp closed http-proxy
+
+Nmap scan report for 132.248.142.189
+Host is up (0.0041s latency).
+Not shown: 94 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  closed https
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+Nmap scan report for router.cnb.unam.mx (132.248.142.254)
+Host is up (0.0024s latency).
+Not shown: 96 filtered tcp ports (no-response)
+PORT     STATE  SERVICE
+113/tcp  closed ident
+179/tcp  open   bgp
+2000/tcp open   cisco-sccp
+5060/tcp open   sip
+
+# Nmap done at Tue Oct  6 09:08:14 2026 -- 256 IP addresses (38 hosts up) scanned in 26.57 seconds

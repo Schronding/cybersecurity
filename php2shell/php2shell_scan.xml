@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///nix/store/3273j67a71nam8bqdhk8gxv08j22lf0y-nmap-7.991/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Wed Oct 28 17:29:02 2026 as: nmap -p 80,443 -&#45;script nmap-php2shell-main/scripts/http-php2shell-version.nse -iL ips_web.txt -oA php2shell_scan -->
+<nmaprun scanner="nmap" args="nmap -p 80,443 -&#45;script nmap-php2shell-main/scripts/http-php2shell-version.nse -iL ips_web.txt -oA php2shell_scan" start="1793230142" startstr="Wed Oct 28 17:29:02 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.62" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.87" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.102" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.121" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.128" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.131" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.154" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.165" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.159" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.169" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.232" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.233" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.249" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.95" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.107" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.138" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.177" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.239" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="132.248.248.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.33" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4030" rttvar="3296" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230176"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.57" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4774" rttvar="5629" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230185"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.61" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3197" rttvar="3476" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230176"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.62" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3427" rttvar="3366" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230144"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3853" rttvar="3191" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.87" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4190" rttvar="3446" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230184"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.95" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4541" rttvar="4194" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230189"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.101" addrtype="ipv4"/>
+<hostnames>
+<hostname name="liigh.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3842" rttvar="3588" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230177"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.102" addrtype="ipv4"/>
+<hostnames>
+<hostname name="app.liigh.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3752" rttvar="3311" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230145"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4403" rttvar="4019" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.107" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4361" rttvar="3299" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.112" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4408" rttvar="3366" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230167"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3377" rttvar="3790" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230183"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="http-php2shell-version" output="&#xa;  VULNERABLE:&#xa;  PHP CVE-2026-109618 - RCE via OOM corruption&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109618&#xa;    Risk factor: High  CVSS: 9.2&#xa;      PHP out-of-memory handling can interrupt request processing while internal&#xa;      request data is only partially initialized. Cleanup may then treat invalid data&#xa;      as valid, potentially resulting in unauthenticated remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 7.3.33&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: X-Powered-By&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;  &#xa;  PHP CVE-2026-109619 - RCE via stale global state&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109619&#xa;    Risk factor: High  CVSS: 9.2&#xa;      Request-owned internal state can survive after its backing memory has been&#xa;      freed. A later request handled by the same worker may use stale state before&#xa;      normal initialization resets it, potentially resulting in unauthenticated&#xa;      remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 7.3.33&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: X-Powered-By&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619&#xa;"><table key="CVE-2026-109618">
+<elem key="title">PHP CVE-2026-109618 - RCE via OOM corruption</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109618</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>PHP out-of-memory handling can interrupt request processing while internal&#xa;request data is only partially initialized. Cleanup may then treat invalid data&#xa;as valid, potentially resulting in unauthenticated remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 7.3.33</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: X-Powered-By</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618</elem>
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+</table>
+</table>
+<table key="CVE-2026-109619">
+<elem key="title">PHP CVE-2026-109619 - RCE via stale global state</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109619</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>Request-owned internal state can survive after its backing memory has been&#xa;freed. A later request handled by the same worker may use stale state before&#xa;normal initialization resets it, potentially resulting in unauthenticated&#xa;remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 7.3.33</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: X-Powered-By</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="3947" rttvar="3386" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.121" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3908" rttvar="3485" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230169"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.128" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="http-php2shell-version" output="&#xa;  VULNERABLE:&#xa;  PHP CVE-2026-109618 - RCE via OOM corruption&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109618&#xa;    Risk factor: High  CVSS: 9.2&#xa;      PHP out-of-memory handling can interrupt request processing while internal&#xa;      request data is only partially initialized. Cleanup may then treat invalid data&#xa;      as valid, potentially resulting in unauthenticated remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 2.9.5&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: HTTP response body&#xa;      Confidence: HIGH&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;  &#xa;  PHP CVE-2026-109619 - RCE via stale global state&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109619&#xa;    Risk factor: High  CVSS: 9.2&#xa;      Request-owned internal state can survive after its backing memory has been&#xa;      freed. A later request handled by the same worker may use stale state before&#xa;      normal initialization resets it, potentially resulting in unauthenticated&#xa;      remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 2.9.5&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: HTTP response body&#xa;      Confidence: HIGH&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619&#xa;"><table key="CVE-2026-109618">
+<elem key="title">PHP CVE-2026-109618 - RCE via OOM corruption</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109618</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>PHP out-of-memory handling can interrupt request processing while internal&#xa;request data is only partially initialized. Cleanup may then treat invalid data&#xa;as valid, potentially resulting in unauthenticated remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 2.9.5</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: HTTP response body</elem>
+<elem>Confidence: HIGH</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618</elem>
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+</table>
+</table>
+<table key="CVE-2026-109619">
+<elem key="title">PHP CVE-2026-109619 - RCE via stale global state</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109619</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>Request-owned internal state can survive after its backing memory has been&#xa;freed. A later request handled by the same worker may use stale state before&#xa;normal initialization resets it, potentially resulting in unauthenticated&#xa;remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 2.9.5</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: HTTP response body</elem>
+<elem>Confidence: HIGH</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="4024" rttvar="3865" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230167"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.131" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3737" rttvar="3523" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3453" rttvar="3249" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.138" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4057" rttvar="3130" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230169"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="http-php2shell-version" output="&#xa;  VULNERABLE:&#xa;  PHP CVE-2026-109618 - RCE via OOM corruption&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109618&#xa;    Risk factor: High  CVSS: 9.2&#xa;      PHP out-of-memory handling can interrupt request processing while internal&#xa;      request data is only partially initialized. Cleanup may then treat invalid data&#xa;      as valid, potentially resulting in unauthenticated remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 5.4.16&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: Server&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;  &#xa;  PHP CVE-2026-109619 - RCE via stale global state&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109619&#xa;    Risk factor: High  CVSS: 9.2&#xa;      Request-owned internal state can survive after its backing memory has been&#xa;      freed. A later request handled by the same worker may use stale state before&#xa;      normal initialization resets it, potentially resulting in unauthenticated&#xa;      remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 5.4.16&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: Server&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619&#xa;"><table key="CVE-2026-109618">
+<elem key="title">PHP CVE-2026-109618 - RCE via OOM corruption</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109618</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>PHP out-of-memory handling can interrupt request processing while internal&#xa;request data is only partially initialized. Cleanup may then treat invalid data&#xa;as valid, potentially resulting in unauthenticated remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 5.4.16</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: Server</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618</elem>
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+</table>
+</table>
+<table key="CVE-2026-109619">
+<elem key="title">PHP CVE-2026-109619 - RCE via stale global state</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109619</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>Request-owned internal state can survive after its backing memory has been&#xa;freed. A later request handled by the same worker may use stale state before&#xa;normal initialization resets it, potentially resulting in unauthenticated&#xa;remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 5.4.16</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: Server</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="4125" rttvar="3236" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230184"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3392" rttvar="3575" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.154" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4882" rttvar="2955" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230169"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4818" rttvar="2922" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4635" rttvar="2895" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230189"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.159" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4731" rttvar="2942" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.165" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lavis.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4856" rttvar="3451" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230167"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4521" rttvar="3147" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.169" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="6420" rttvar="4210" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230168"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="132.248.248.175" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kneipe.lavis.unam.mx" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/><script id="http-php2shell-version" output="&#xa;  VULNERABLE:&#xa;  PHP CVE-2026-109618 - RCE via OOM corruption&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109618&#xa;    Risk factor: High  CVSS: 9.2&#xa;      PHP out-of-memory handling can interrupt request processing while internal&#xa;      request data is only partially initialized. Cleanup may then treat invalid data&#xa;      as valid, potentially resulting in unauthenticated remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 8.0.30&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: X-Powered-By&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;  &#xa;  PHP CVE-2026-109619 - RCE via stale global state&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2026-109619&#xa;    Risk factor: High  CVSS: 9.2&#xa;      Request-owned internal state can survive after its backing memory has been&#xa;      freed. A later request handled by the same worker may use stale state before&#xa;      normal initialization resets it, potentially resulting in unauthenticated&#xa;      remote code execution.&#xa;    Disclosure date: 2026-10-21&#xa;    Check results:&#xa;      Observed PHP version: 8.0.30&#xa;      Upstream fixed version: No upstream fixed release for this EOL branch&#xa;      Evidence source: X-Powered-By&#xa;      Confidence: MEDIUM&#xa;      Detected path: /&#xa;      Assessment method: remote version comparison only&#xa;    Extra information:&#xa;      Upstream severity: CRITICAL - CVSS v4.0 9.2&#xa;      Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.&#xa;      This script does not attempt exploitation or intrusive multipart probing.&#xa;    References:&#xa;      https://www.php.net/archive/2026.php#2026-10-21-5&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619&#xa;"><table key="CVE-2026-109618">
+<elem key="title">PHP CVE-2026-109618 - RCE via OOM corruption</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109618</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>PHP out-of-memory handling can interrupt request processing while internal&#xa;request data is only partially initialized. Cleanup may then treat invalid data&#xa;as valid, potentially resulting in unauthenticated remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 8.0.30</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: X-Powered-By</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109618</elem>
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+</table>
+</table>
+<table key="CVE-2026-109619">
+<elem key="title">PHP CVE-2026-109619 - RCE via stale global state</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2026-109619</elem>
+</table>
+<table key="scores">
+<elem key="CVSS">9.2</elem>
+</table>
+<table key="description">
+<elem>Request-owned internal state can survive after its backing memory has been&#xa;freed. A later request handled by the same worker may use stale state before&#xa;normal initialization resets it, potentially resulting in unauthenticated&#xa;remote code execution.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">21</elem>
+<elem key="month">10</elem>
+<elem key="year">2026</elem>
+</table>
+</table>
+<elem key="disclosure">2026-10-21</elem>
+<table key="check_results">
+<elem>Observed PHP version: 8.0.30</elem>
+<elem>Upstream fixed version: No upstream fixed release for this EOL branch</elem>
+<elem>Evidence source: X-Powered-By</elem>
+<elem>Confidence: MEDIUM</elem>
+<elem>Detected path: /</elem>
+<elem>Assessment method: remote version comparison only</elem>
+</table>
+<table key="extra_info">
+<elem>Upstream severity: CRITICAL - CVSS v4.0 9.2</elem>
+<elem>Verify distribution/LTS vendor backports or upgrade to a supported PHP branch.</elem>
+<elem>This script does not attempt exploitation or intrusive multipart probing.</elem>
+</table>
+<table key="refs">
+<elem>https://www.php.net/archive/2026.php#2026-10-21-5</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="4381" rttvar="3411" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230190"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.177" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4195" rttvar="3334" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230176"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.232" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="5009" rttvar="3207" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230184"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.233" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="5024" rttvar="3240" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230184"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.239" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3873" rttvar="3271" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230199"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="3874" rttvar="3273" to="100000"/>
+</host>
+<host starttime="1793230144" endtime="1793230176"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="132.248.248.249" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="4296" rttvar="3205" to="100000"/>
+</host>
+<runstats><finished time="1793230199" timestr="Wed Oct 28 17:29:59 2026" summary="Nmap done at Wed Oct 28 17:29:59 2026; 36 IP addresses (35 hosts up) scanned in 57.45 seconds" elapsed="57.45" exit="success"/><hosts up="35" down="1" total="36"/>
+</runstats>
+</nmaprun>

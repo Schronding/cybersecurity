@@ -1,0 +1,74 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-10-06 08:57 -0600
+Nmap scan report for folio.inb.unam.mx (132.248.142.3)
+Host is up (0.0097s latency).
+Nmap scan report for bibloinb.inb.unam.mx (132.248.142.4)
+Host is up (0.0096s latency).
+Nmap scan report for 132.248.142.5
+Host is up (0.0096s latency).
+Nmap scan report for posgrado.inb.unam.mx (132.248.142.6)
+Host is up (0.0098s latency).
+Nmap scan report for dbserver.inb.unam.mx (132.248.142.11)
+Host is up (0.0030s latency).
+Nmap scan report for 132.248.142.12
+Host is up (0.0027s latency).
+Nmap scan report for personal.inb.unam.mx (132.248.142.13)
+Host is up (0.0067s latency).
+Nmap scan report for 132.248.142.14
+Host is up (0.0068s latency).
+Nmap scan report for 132.248.142.17
+Host is up (0.0067s latency).
+Nmap scan report for 132.248.142.21
+Host is up (0.0028s latency).
+Nmap scan report for 132.248.142.22
+Host is up (0.0029s latency).
+Nmap scan report for salva.inb.unam.mx (132.248.142.23)
+Host is up (0.012s latency).
+Nmap scan report for 132.248.142.25
+Host is up (0.012s latency).
+Nmap scan report for 132.248.142.33
+Host is up (0.0024s latency).
+Nmap scan report for 132.248.142.34
+Host is up (0.0029s latency).
+Nmap scan report for 132.248.142.35
+Host is up (0.0029s latency).
+Nmap scan report for 132.248.142.36
+Host is up (0.0026s latency).
+Nmap scan report for www.maestria.inb.unam.mx (132.248.142.37)
+Host is up (0.0026s latency).
+Nmap scan report for www.visualizacion.inb.unam.mx (132.248.142.38)
+Host is up (0.0030s latency).
+Nmap scan report for 132.248.142.45
+Host is up (0.0029s latency).
+Nmap scan report for 132.248.142.46
+Host is up (0.0045s latency).
+Nmap scan report for 132.248.142.48
+Host is up (0.0040s latency).
+Nmap scan report for 132.248.142.49
+Host is up (0.0036s latency).
+Nmap scan report for 132.248.142.51
+Host is up (0.0035s latency).
+Nmap scan report for 132.248.142.53
+Host is up (0.0044s latency).
+Nmap scan report for penfield.inb.unam.mx (132.248.142.55)
+Host is up (0.0044s latency).
+Nmap scan report for 132.248.142.57
+Host is up (0.0038s latency).
+Nmap scan report for 132.248.142.60
+Host is up (0.0025s latency).
+Nmap scan report for correo.enesjuriquilla.unam.mx (132.248.142.102)
+Host is up (0.0021s latency).
+Nmap scan report for 132.248.142.103
+Host is up (0.0034s latency).
+Nmap scan report for 132.248.142.108
+Host is up (0.0029s latency).
+Nmap scan report for urm.inb.unam.mx (132.248.142.111)
+Host is up (0.0049s latency).
+Nmap scan report for 132.248.142.112
+Host is up (0.0059s latency).
+Nmap scan report for 132.248.142.113
+Host is up (0.0055s latency).
+Nmap scan report for 132.248.142.127
+Host is up (0.0032s latency).
+Nmap scan report for 132.248.142.189
+Host is up (0.0042s latency).
+Nmap done: 256 IP addresses (36 hosts up) scanned in 2.94 seconds
