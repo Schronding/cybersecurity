@@ -1,0 +1,23 @@
+# Nmap 7.991 scan initiated Tue Nov  3 09:05:40 2026 as: nmap -sV -O -oA os_scan_3.2 132.248.212
+Nmap scan report for 132.248.212 (132.248.0.212)
+Host is up (0.0034s latency).
+Not shown: 990 filtered tcp ports (no-response)
+PORT     STATE  SERVICE     VERSION
+21/tcp   open   ftp?
+25/tcp   open   smtp?
+80/tcp   open   http?
+110/tcp  open   pop3?
+113/tcp  closed ident
+143/tcp  open   imap?
+443/tcp  open   https?
+2000/tcp open   cisco-sccp?
+5060/tcp open   sip?
+8010/tcp open   xmpp?
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X (89%)
+OS CPE: cpe:/o:linux:linux_kernel:3
+Aggressive OS guesses: Linux 3.2 - 3.8 (89%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  3 09:06:34 2026 -- 1 IP address (1 host up) scanned in 54.23 seconds

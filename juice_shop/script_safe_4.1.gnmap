@@ -1,0 +1,4 @@
+# Nmap 7.991 scan initiated Tue Nov  3 09:28:51 2026 as: nmap --script safe -oA script_safe_4.1 132.248.185.212
+Host: 132.248.185.212 ()	Status: Up
+Host: 132.248.185.212 ()	Ports: 21/closed/tcp//ftp///, 113/closed/tcp//ident///, 2000/open/tcp//cisco-sccp///, 3000/open/tcp//ppp///, 5060/open/tcp//sip///, 8888/closed/tcp//sun-answerbook///	Ignored State: filtered (994)
+# Nmap done at Tue Nov  3 09:30:49 2026 -- 1 IP address (1 host up) scanned in 117.85 seconds

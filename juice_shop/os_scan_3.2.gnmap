@@ -1,0 +1,4 @@
+# Nmap 7.991 scan initiated Tue Nov  3 09:05:40 2026 as: nmap -sV -O -oA os_scan_3.2 132.248.212
+Host: 132.248.0.212 ()	Status: Up
+Host: 132.248.0.212 ()	Ports: 21/open/tcp//ftp?///, 25/open/tcp//smtp?///, 80/open/tcp//http?///, 110/open/tcp//pop3?///, 113/closed/tcp//ident///, 143/open/tcp//imap?///, 443/open/tcp//https?///, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8010/open/tcp//xmpp?///	Ignored State: filtered (990)	Seq Index: 264	IP ID Seq: Randomized
+# Nmap done at Tue Nov  3 09:06:34 2026 -- 1 IP address (1 host up) scanned in 54.23 seconds
