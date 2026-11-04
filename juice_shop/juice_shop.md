@@ -341,4 +341,130 @@ VM146:1 Uncaught SyntaxError: Unexpected string (at VM146:1:9)
 
 27. In `http://132.248.185.212:3000/#/score-board` it is surprising to me the amount of challenges that the page has. I think that the juice shop can indeed be an extremely good crash course on the red team. 
 
-28. In `http://132.248.185.212:3000/#/search` I assume there is nothing interesting either, as it is simply the products, some of which I assume might be real and can be purchased in a safer place. 
+28. In `http://132.248.185.212:3000/#/search` I assume there is nothing interesting either, as it is simply the products, some of which I assume might be real and can be purchased in a safer place.
+
+29. Now that I have a clearer guide on `Guia-OWASP-Juice-Shop.md` I can look it step by step. 
+
+30. Is `dirsearch` an actual technique? Or is it simply to explore the website manually as I have been doing in the previous steps? 
+
+31. What is `ffuf`? 
+
+32. That `continueCode` cookie seems interesting... but what is a cookie to begin with? I understand them as "cache" memories that the browsers store locally, and I suppose their importance in cybersecurity comes that they allow bot behavior that acts as an actual human visiting the site. 
+
+33. What other subsections could prove interesting? I assume that `Back/forward cache` could be one, `Cache storage` could be another and probably `IndexedDB` as one of the 3 most important ones. 
+
+![application web dev tools](image-1.png)
+
+34. When I clicked `IndexedDB` it appeared that there was "No IndexedDB detected", so I assume it is a larger storage version of `LocalStorage` that probably also supports different data types as times or numeric values, while the former stores everything in strings. 
+
+35. In `Cache storage` I didn't found anything either, as it says "No cache storage detected". 
+
+36. `Back/forward cache` seems to only be a service to see if the connection of the cache is stablished and stored, so it doesn't seem to provide direct information about how to hack the site. It just said to me "Successfully served from back/forward cache
+http://132.248.185.212:3000/" 
+
+37. I am still not seeing anything that could serve me. That there is a websocket open seems exciting, as for what I recall websockets are a communication protocol that is practically always run as a daemon, so if I get to vulnerate it I could probably steal data without the owner noticing. 
+
+![Network tab dev tools](image-2.png)
+
+38. Of the other I have never heard of the `xhr` type. What is that? They also have the name of socket at the beginning, so I assume it is just a different protocol, like TLS. 
+
+39. I knew that you could access code from the browser, but I didn't knew it was this organized 
+
+![Sources tab dev tools](image-3.png)
+
+40. I assume chrome web dev tools automatically changes the names and even messes up the css in order for you to have an idea of how things are organized but that you can't simply copy the code and have a copy of the website. However, as I have seen the trend of Reverse Engineer Anything with binaries I don't see why enough computing power with a powerful AI could not create a replica of the web site... although I imagine the AI would have an easier time simply replicating the site via screeshots. 
+
+41. How could I continue attacking the Juice Shop? I am stuck.
+
+42. How interesting! When I used ` OR 1=1` in the login username I could enter... but where do I look for the users? 
+
+43. When I went to the dev tools I found these errors (which seem to be the same but repeated 4 times)
+
+```
+http://132.248.185.212:3000 is not an authorized redirect URI for this application.
+main.js:616 Crerror: ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}headers: e {headers: Map(0), normalizedNames: Map(0), lazyInit: undefined, lazyUpdate: null}message: "Http failure response for ./api/Quantitys/: 0 Unknown Error"name: "HttpErrorResponse"ok: falseredirected: undefinedstatus: 0statusText: "Unknown Error"type: undefinedurl: "./api/Quantitys/"[[Prototype]]: Tr
+:3000/api/Quantitys/:1  Failed to load resource: net::ERR_CONNECTION_RESET
+main.js:484 Crerror: ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}headers: e {headers: Map(0), normalizedNames: Map(0), lazyInit: undefined, lazyUpdate: null}message: "Http failure response for ./rest/basket/1: 0 Unknown Error"name: "HttpErrorResponse"ok: falseredirected: undefinedstatus: 0statusText: "Unknown Error"type: undefinedurl: "./rest/basket/1"[[Prototype]]: Tr
+:3000/rest/basket/1:1  Failed to load resource: net::ERR_CONNECTION_RESET
+main.js:502 Crerror: ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}headers: e {headers: Map(0), normalizedNames: Map(0), lazyInit: undefined, lazyUpdate: null}message: "Http failure response for ./rest/user/whoami?fields=email: 0 Unknown Error"name: "HttpErrorResponse"ok: falseredirected: undefinedstatus: 0statusText: "Unknown Error"type: undefinedurl: "./rest/user/whoami?fields=email"[[Prototype]]: Tr
+:3000/rest/user/whoami?fields=email:1  Failed to load resource: net::ERR_CONNECTION_RESET
+main.js:496 Crerror: ProgressEvent {isTrusted: true, lengthComputable: false, loaded: 0, total: 0, type: 'error', …}headers: e {headers: Map(0), normalizedNames: Map(0), lazyInit: undefined, lazyUpdate: null}message: "Http failure response for ./rest/user/whoami: 0 Unknown Error"name: "HttpErrorResponse"ok: falseredirected: undefinedstatus: 0statusText: "Unknown Error"type: undefinedurl: "./rest/user/whoami"[[Prototype]]: Tr
+:3000/rest/user/whoami:1  Failed to load resource: net::ERR_CONNECTION_RESET
+```
+
+44. I find another place where I think it could be an interesting vulnerability: 
+
+![Request data form](image-4.png)
+
+While I cannot download anything for now I assume there must be a way to retrieve all the data of all the users if I manage to trick their own system
+
+45. I was just about to try to mix the `fetch` and `GET` commands on the console when it appeared red letters `[object progressEvent]` on top of "Export Format" just like in the beginning of the login bar. When I went to the dev tools there were a lot of errors such as the previous `Cr` ones along 
+
+```
+ERROR Error: Parameter "key" required
+    at i.get (chunk-4MIYPPGW.js:1:7579)
+    at i.open (chunk-4MIYPPGW.js:18:10673)
+    at Object.error (main.js:656:4812)
+    at La.error (chunk-LHKS7QUN.js:3:3562)
+    at Oe._error (chunk-LHKS7QUN.js:3:3247)
+    at Oe.error (chunk-LHKS7QUN.js:3:3007)
+    at Ha._error (chunk-LHKS7QUN.js:3:5843)
+    at Ha.error (chunk-LHKS7QUN.js:3:3007)
+    at Ha._error (chunk-LHKS7QUN.js:3:3247)
+    at Ha.error (chunk-LHKS7QUN.js:3:3007)
+```
+
+and 
+
+```
+Failed to load resource: net::ERR_CONNECTION_RESET
+:3000/rest/user/data-export:1  Failed to load resource: net::ERR_CONNECTION_RESET
+:3000/rest/user/data-export:1  Failed to load resource: net::ERR_CONNECTION_RESET
+```
+
+at the end. 
+
+46. I ran the `fetch` method and got more errors, but I don't know which valuable information they bring 
+
+```
+fetch('http://host:3000/rest/user?...').then(r => r.json()).then(console.log)
+M {__zone_symbol__state: null, __zone_symbol__value: Array(0)}__zone_symbol__state: 0__zone_symbol__value: TypeError: Failed to fetch
+    at http://132.248.185.212:3000/polyfills.js:2:3143
+    at e.<computed> (http://132.248.185.212:3000/polyfills.js:1:14181)
+    at <anonymous>:1:1Symbol(Symbol.species): (...)Symbol(Symbol.toStringTag): (...)[[Prototype]]: Object
+polyfills.js:2  GET http://host:3000/rest/user?... net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ polyfills.js:2
+e.<computed> @ polyfills.js:1
+(anonymous) @ VM209:1
+polyfills.js:1 TypeError: Failed to fetch
+    at polyfills.js:2:3143
+    at e.<computed> (polyfills.js:1:14181)
+    at <anonymous>:1:1
+```
+
+While `polyfills` could be unnecessary leakage of information, I think it is most likely just a generic, random name for a web-related action. 
+
+47. Is it okay that I put `host` or do I need to replace it with `http://132.248.185.212/`? Lets give it a try 
+
+```
+fetch('http://132.248.185.212:3000/rest/user?...').then(r => r.json()).then(console.log)
+M {__zone_symbol__state: null, __zone_symbol__value: Array(0)}__zone_symbol__state: 0__zone_symbol__value: SyntaxError: Unexpected token '<', "<html>
+  <"... is not valid JSONSymbol(Symbol.species): (...)Symbol(Symbol.toStringTag): (...)[[Prototype]]: Object
+polyfills.js:2  GET http://132.248.185.212:3000/rest/user?... 500 (Internal Server Error)
+(anonymous) @ polyfills.js:2
+e.<computed> @ polyfills.js:1
+(anonymous) @ VM231:1
+polyfills.js:1 SyntaxError: Unexpected token '<', "<html>
+  <"... is not valid JSON (at VM232:1:1)
+```
+
+It seems it didn't change anything... the error message looks shorter though. 
+
+48. I tried to run the curl script without the `-s` flag so it isn't silent but somehow I wrote something wrongly 
+
+```
+curl -i "http://132.248.185.212:3000/rest/user?sort=price:ASC,createdAt:DESC-- -" | h
+ead -c 200
+curl: (3) URL rejected: Malformed input to a URL function
+```
+
