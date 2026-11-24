@@ -8,6 +8,10 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
+          nuclei
+          zap          # OWASP ZAP (nixpkgs name; "zaproxy" is the Debian/Kali name)
+          firefox      # browser ZAP launches for Manual Explore / AJAX Spider
+          geckodriver  # lets ZAP drive that Firefox (Selenium)
           unzip
           binwalk
           exiftool
@@ -18,6 +22,7 @@
           python3
           sqlmap
 	  nmap
+          ollama
         ];
         shellHook = ''
   export NIX_LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [

@@ -314,9 +314,213 @@ You've actually finished reconnaissance (Phases 1–2) and have the map; the nex
 6. **Consider the discovery tools** (`dirsearch` / `ffuf`, entries 26–27) against the lab host to surface unlinked paths — like the Score Board you found by guessing.
 Keep documenting in the guide's Endpoint → Method → Payload → Response → Impact format, reset the instance when state gets messy, and test only this authorised instance.
 
+## report.md and chat
+
+Entries 36–50 follow report.md in order of appearance; 51 onwards come from the chat.
+
+### 35. Which nuclei templates are the "relevant" ones (report.md / chat - Módulo 1) [Lookup]
+#### User's Discovery/Doubt:
+> What are the relevant templates I need to have?
+
+> the instructions in `./evaluacion.md` say that I should use certain relevant nuclei templates. Which are those?
+#### Verdict:
+No prior assumption - you asked which ones without proposing any. "Relevant" means the categories the guide lists (exposures, security headers, detected technologies). Nuclei selects those by **tag**, and the severity filter has to include `info`.
+#### Explanation:
+Run from this folder (nuclei comes from the repo's flake):
+```bash
+nuclei -u http://127.0.0.1:3000 -pt http \
+  -tags exposure,misconfig,headers,tech \
+  -etags intrusive,default-login \
+  -s info,low,medium,high \
+  -ni -rl 10 -c 5 \
+  -jle nuclei_juice.jsonl -me nuclei_md
+```
+- `-u http://127.0.0.1:3000`: targets only the local instance, as the scope rules require.
+- `-pt http`: runs only HTTP templates, because the target is a web app.
+- `-tags exposure,misconfig,headers,tech`: the guide's categories, in nuclei's tag names. `exposure` covers exposed files and information disclosure. `misconfig` covers misconfigurations, including headers, CORS and cookies. `headers` covers security headers. `tech` covers technology detection. Verified: this takes the 13,806 installed templates (v10.5.2) down to about 3,000.
+- `-etags intrusive,default-login`: drops 70 templates that try default passwords or change the server (`put-method-enabled`, for example, uploads a file). This keeps the scan non-invasive.
+- `-s info,low,medium,high`: the guide names low, medium and high, but you also need `info`. `http-missing-security-headers` and the technology templates are all `info`, so without it you lose the missing-headers finding the deliverable asks for.
+- `-ni`: turns off interactsh. Ten of the selected templates confirm a hit by making the target call back to an external server (`oast.pro` and similar), which would break the localhost-only rule.
+- `-rl 10 -c 5`: at most 10 requests per second (default 150) and 5 templates in parallel (default 25). This is the rate limit and low concurrency the guide asks for.
+- `-jle` / `-me`: writes a JSONL file plus one Markdown file per finding. Both include the request and response that triggered each rule by default, which gives the traceability the guide asks for.
+
+What to expect is inferred, since I didn't run the scan. With one request I verified that the instance sends no CSP, HSTS or Referrer-Policy and does send the deprecated `Feature-Policy`. So `http-missing-security-headers` and `deprecated-feature-policy` should fire. `prometheus-metrics` (`/metrics`), `swagger-api` (`/api-docs`), `owasp-juice-shop-detect` and `tech-detect` should fire too. For the false-positive column: Juice Shop answers any unknown path with `200` and its main page (verified: `/does-not-exist-xyz.bak` returned the same 9,831 bytes as `/`). So treat an exposure hit on a file like `/backup.zip` as suspect until `curl -i` shows real content. One gap: `cors-misconfig` only fires when the server reflects the origin and also sends `Access-Control-Allow-Credentials: true`, so it misses Juice Shop's `Access-Control-Allow-Origin: *`. ZAP's passive scan in Módulo 2 flags that one.
+
+### 36. Tools go in the flake (report.md) [Correct]
+#### User's Discovery/Doubt:
+> Now I need to install nuclei, which I should just put in my flake.nix if I am not mistaken.
+#### Verdict:
+Correct - adding a package to the devShell's list in `flake.nix` is how this repo gets its tools. direnv reloads the shell when the file changes, and nothing is installed system-wide.
+
+### 37. `-t` takes templates, not the target (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> I am checking at a guide some years ago and I found this ... `nuclei -t https://example.com -t ~/nuclei-templates/`
+
+> So at least that command doesn't work
+#### Verdict:
+Correct that it fails - but the cause is the flag, not the guide's age. `-t` names templates; the target goes after `-u`.
+#### Explanation:
+Because the URL came after `-t`, nuclei treated `https://example.com` as a remote template to download and refused it: "Remote template URL host (example.com) is not present in the `remote-template-domain` list". The working shape is `nuclei -u <target> -t <templates>`. `example.com` was the guide's placeholder; under this lab's rules the only target is `http://127.0.0.1:3000`.
+
+### 38. The 0-match scans failed on the URL, not the template choice (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> For what it seems I am scanning with all the templates instead of the relevant ones... that was a mistake.
+
+> I did it again... but this should be a mistake, doesn't it? the juice shop is full of vulnerabilities and it found none
+#### Verdict:
+Partly correct - both 0-result scans were mistakes, but running all templates wasn't what broke them. Each had a target URL nuclei couldn't reach.
+#### Explanation:
+The first used `https://127.0.0.1:3000`. Juice Shop serves plain HTTP, so every TLS handshake failed (verified: `curl -k https://127.0.0.1:3000` exits with code 35, an SSL connect error). nuclei's own summary shows it: "HTTP connections: 4 total" for 11,330 templates. The "Skipped 127.0.0.1:5814 / 4040" lines are templates that probe other ports where nothing listens, which is harmless. The second used `http:127.0.0.1:3000`, which lacks the `//` and so isn't a URL. nuclei fell back to probing it as a host, "Found 0 URL from httpx", and scanned nothing in 26 seconds. All templates against the right URL would have been slow and noisy, not blind. Your filtered scan with the right URL found 14 matches (entry 35).
+
+### 39. dns, headless and websocket are protocols; Juice Shop is an http target (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> The ones that seem the most relevant are dns, headless, websocket.
+#### Verdict:
+Wrong - those top-level folders sort templates by protocol, and almost everything that applies to a web app is in `http/`.
+#### Explanation:
+Verified counts: `http/` 11,835 templates, `dns/` 31, `headless/` 26, `websocket/` 1. DNS templates query a domain's DNS records, and a bare IP like 127.0.0.1 has none. Headless templates drive a browser and only run when you add `-headless`. The single websocket template targets one specific product. The subfolders that matter here sit inside `http/`: `exposures/`, `misconfiguration/`, `technologies/`. Your working scan confirms it, since all 14 matches are `[http]`. Selecting by `-tags` (entry 35) beats selecting by folder, because a tag gathers matching templates from every folder.
+
+### 40. `-j` with `-o` is the other way to get JSONL (report.md) [Correct]
+#### User's Discovery/Doubt:
+> The professor says that `-jsonl` is to save it in JSONL and with `-o` I gave the file the name.
+#### Verdict:
+Correct - `-o <file>` writes the findings to a file and `-j`/`-jsonl` makes that file JSONL. `-jle <file>` (entry 42) produces a JSONL file with a single flag, so either way meets the guide's structured-output requirement.
+
+### 41. `-pt` means protocol type (report.md) [Lookup]
+#### User's Discovery/Doubt:
+> What does the `-pt` flag mean? I understand that it only runs http but what `-pt` stands for?
+#### Verdict:
+No prior assumption about the name - and your reading of what it does is right.
+#### Explanation:
+`-pt` is the short form of `-type`, which `nuclei -h` describes as "templates to run based on protocol type". Its values (dns, file, http, headless, tcp, workflow, ssl, websocket, whois, code, javascript) are the same names as the top-level template folders in entry 39.
+
+### 42. `-jle` and `-me` mean export, and each run replaces them (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> I assume the `jle` and `me` mean something like "JSONL extend" and "Markdown extend", so we can have just one file that grows through time instead of being constantly replaced.
+#### Verdict:
+Wrong - the "e" stands for export: `-jle` is `-jsonl-export` and `-me` is `-markdown-export`. Neither grows; each run replaces the previous results.
+#### Explanation:
+Verified by running one template twice into the same paths. After the second run the JSONL file still had 1 line and the Markdown folder still held a single finding. To keep evidence from several runs, give each run its own file name (a date suffix works). The export is worth keeping: each JSONL line holds the HTTP `request` and `response` that triggered the finding (all 14 of yours do), plus a ready-made `curl-command` to reproduce it.
+
+### 43. The "missing" files are in the folder you ran nuclei from (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> But I don't see the `nuclei_juice.jsonl` or `nuclei_md` files anywhere.
+#### Verdict:
+Wrong - they were written, one folder up: `/home/nixos/repos/cybersecurity/nuclei_juice.jsonl` and `/home/nixos/repos/cybersecurity/nuclei_md/`.
+#### Explanation:
+A relative path like `nuclei_juice.jsonl` is resolved against the shell's current directory. Your shell history shows you ran the scan from the repo root, not from `juice_shop/`. Both outputs are complete: 14 lines in the JSONL, and 14 finding files plus `index.md` in `nuclei_md/`. From `juice_shop/`, `mv ../nuclei_juice.jsonl ../nuclei_md .` brings them next to the report.
+
+### 44. Módulo 1 still needs its real-vs-false-positive list (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> It seems that I have done everything that was required in this first part
+#### Verdict:
+Partly correct - the scan is done, and the version and template-update output is already in report.md. The second deliverable, a findings list "diferenciando los hallazgos reales de posibles falsos positivos", isn't written yet.
+#### Explanation:
+Two of your 14 matches show the judgement the guide wants. `fingerprinthub-web-fingerprints:qm-system` is a false positive: that rule fires on any page containing `src="polyfills.js`, which every Angular app has, and Juice Shop isn't QM System (verified in the template). `tech-detect:google-font-api` is real, because Juice Shop's index page loads `fonts.googleapis.com` (verified). Check the other 12 the same way: open each file in `nuclei_md/` and decide whether the response really shows what the rule claims.
+
+### 45. `zaproxy` is the Debian name; nixpkgs calls it `zap` (report.md) [Correct]
+#### User's Discovery/Doubt:
+> It didn't work, that probably isn't the name
+#### Verdict:
+Correct - `error: undefined variable 'zaproxy'` means nixpkgs has no package by that name. Kali and Debian call it `zaproxy`; nixpkgs calls it `zap`. It's fixed in `flake.nix`, together with `firefox` and `geckodriver`, which ZAP's browser-driven spiders need.
+
+### 46. Client Spider is a third spider, not the one the guide names (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> With zap I am struggling a lot in finding the tools that Claude tells me, I have version 2.17, the latest, and I went to tools > client spider
+#### Verdict:
+Partly correct - Client Spider is a real ZAP 2.17 tool, but it isn't the traditional Spider the guide asks for. ZAP 2.17 has three: Spider..., AJAX Spider... and Client Spider....
+#### Explanation:
+The traditional one is Tools → Spider... (or right-click the site → Attack → Spider...). It reads the HTML the server returns and doesn't run JavaScript. AJAX Spider and Client Spider both drive a real browser; the Client Spider is ZAP's newer one. The guide asks for "Spider tradicional y AJAX Spider", so those are the two to run and screenshot.
+
+### 47. The starting point needs the scheme (report.md - image-5, image-6) [Correct]
+#### User's Discovery/Doubt:
+> It doesn't allow me to run, as it says I need a valid starting point along with the protocol
+
+> I think the problem is that I am not putting the complete address
+#### Verdict:
+Correct - image-5 has `127.0.0.1:3000`, which is a host and port, not a URL. ZAP needs the scheme, `http://127.0.0.1:3000`, as image-7 shows. It's the same root cause as nuclei's `http:127.0.0.1:3000` in entry 38.
+
+### 48. The Client Spider was fast because it barely crawled (report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> Now it works, and it seems it went through everything fairly quickly, which is suspicious for me as my computer is not that powerful. Maybe AJAX will require more power
+#### Verdict:
+Partly correct - the suspicion is right, but it didn't go through everything. Judging by timestamps, ZAP recorded only 26 requests from it, all within two seconds (08:47:32–34).
+#### Explanation:
+That's the start page and the files it loads, not a crawl. At startup ZAP's log shows "Failed to get or create Firefox profile zap-client-profile", the browser profile the Client Spider uses, so it likely never got to explore (inferred, not verified). You're right that the AJAX Spider needs more resources, because it runs real browsers (entry 50).
+
+### 49. Scope is the part of the web you tell ZAP is your target (report.md - image-7, image-8) [Mechanism]
+#### User's Discovery/Doubt:
+> What is the scope in this scenario? I will uncheck that mark for now
+#### Verdict:
+No prior assumption about what scope is. Unchecking works, but the better fix is to put the site in scope.
+#### Explanation:
+In ZAP, scope is the set of URLs in a Context marked "in scope". Image-7 shows an empty Context field, so nothing was in scope and "Just In Scope" rejected the start URL (image-8). Here the scope should be exactly `http://127.0.0.1:3000`: right-click it in Sites → Include in Context → Default Context. That's also the Context the guide's Phase 3 asks you to define, and it keeps the Google domains your browser contacted out of scans. With the box unchecked, "Spider Subtree Only" still kept the crawl under `http://127.0.0.1:3000`.
+
+### 50. The AJAX Spider broke on 12 browsers, not on a weak machine (report.md - image-9) [Mechanism]
+#### User's Discovery/Doubt:
+> IT seems it broke somewhere along the way, could this be by the poor hardware power of my machine?
+#### Verdict:
+Partly correct - resources likely played a part, but the cause is a setting: ZAP was told to open 12 browsers.
+#### Explanation:
+The AJAX Spider's "Number of Browser Windows to Open" was 12, one per CPU core on your machine, since you hadn't opened the advanced options. ZAP's log shows it launching headless Firefox roughly every 15 seconds from 08:50. The 12th didn't start in time (`TimeoutException`), and the crawl aborted with the image-9 message. Your WSL VM has 7.4 GiB of RAM and swap was nearly full (1.6 of 2.0 GiB), which fits browsers starting too slowly (inferred). The run wasn't wasted: ZAP recorded about 300 requests from it before it stopped, and they're in the Sites tree even though ZAP counts 0 AJAX Spider results. Re-run with Show Advanced Options → 1 or 2 browser windows and a 10-minute maximum duration.
+
+### 51. What spidering is and how to run it (chat) [Lookup]
+#### User's Discovery/Doubt:
+> I already went through the entire page manually, but how do I execute the spider? What is spidering? How do I send you the output of the things that Zap tracked?
+#### Verdict:
+No prior assumption - you asked how, without proposing an answer.
+#### Explanation:
+A spider (or crawler) maps a site automatically. It requests a page, pulls out every link and URL, queues the new ones, and repeats until nothing new turns up. Its finds land in the Sites tree beside your manual browsing. The traditional Spider reads HTML and doesn't run JavaScript. The AJAX Spider drives a real browser and records the requests the page's JavaScript makes; since Juice Shop is an Angular app, it's the one that finds most routes. Spidering isn't fully passive, because it sends real requests. To run them, put the site in scope first (entry 49), then right-click `http://127.0.0.1:3000` → Attack → Spider... → Start Scan, then Attack → AJAX Spider... with 1–2 browser windows (entry 50). To share results, nothing needs exporting: ZAP's API runs at `127.0.0.1:8080` in the same WSL, and I can read it with the key in `~/.ZAP/config.xml`. A file also works: History tab → Ctrl+A → right-click → Save as HAR....
+
+### 52. The "I/O errors" don't point to failing hardware (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> I am getting a lot of I/O errors, does this mean that my computer is failing?
+#### Verdict:
+Wrong - nothing points at the machine. The kernel log has no disk errors and the disk is 9% full. What ZAP logged are network timeouts and the browser start-up timeout.
+#### Explanation:
+A failing disk shows up as I/O errors in the kernel log (`dmesg`), and there are none. ZAP has three things that look like errors:
+1. 13 `504 Gateway Timeout`s, all on `/socket.io/?EIO=4&transport=polling`, Juice Shop's live-notification channel (entry 31). Socket.IO's polling deliberately holds each request open until it has something to push, by default for up to about 25 seconds. ZAP stops waiting after 20 seconds and answers the browser with a 504. It's expected and harmless.
+2. 45 entries with the empty status `HTTP/1.0 0`. These are folder entries ZAP adds to the Sites tree (`/assets`, `/rest`, `/api/Users`, ...). They were never sent, so they have no response.
+3. The browser start-up timeout in entry 50.
+
+The four "API key incorrect or not supplied" warnings in ZAP's log came from my own test calls. If the I/O errors you mean appear somewhere else, a screenshot will show what they are.
+
+### 53. The traditional Spider has no browser windows to limit (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> I didn't find the setting to limit to two browser windows in only spider. I did put the 10 minute limit though.
+#### Verdict:
+Partly correct - the 10-minute limit was a good addition, but the browser-window setting was never going to be in the traditional Spider. That Spider doesn't open any browser.
+#### Explanation:
+The traditional Spider sends the HTTP requests itself and reads the HTML that comes back, so there are no browsers to count. It finished at 100%: 108 URLs inside the site, 39 outside it, 0 I/O errors (verified through ZAP's API). The spider that opens browsers is the AJAX Spider. Its setting is in the AJAX Spider dialog → Show Advanced Options → Number of Browser Windows to Open (or permanently in Tools → Options → AJAX Spider). The AJAX Spider's last run is the one that crashed with 12 browsers (entry 50), and it hasn't been run again since.
+
+### 54. Module 2 isn't finished yet (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> So I am done with module two and I can continue with module 3?
+#### Verdict:
+Not yet - Phase 1 is nearly done, Phase 2 has its material but no write-up, and Phase 3 hasn't started.
+#### Explanation:
+Module 2 has two deliverables. The first is a screenshot of the Site Tree after manual and automated exploration. The second is a table comparing at least 3 passive alerts with at least 2 alerts from an active scan, each explained at the HTTP level. **Passive** alerts come from ZAP quietly reading traffic that was sent anyway (your browsing, the spiders). ZAP already has 17 kinds of them (842 instances). **Active** alerts only appear after an active scan, where ZAP sends its own test attacks to the site. None has run yet (verified). The active scan must also be limited to `http://127.0.0.1:3000`, and the Context is still empty, so the site isn't in scope yet (entry 49). Remaining, in order:
+1. Put the site in scope.
+2. Re-run the AJAX Spider with 1–2 browsers.
+3. Take the Site Tree screenshot.
+4. Pick and explain 3 passive alerts.
+5. Run the active scan.
+6. Write the comparison table.
+
+### 55. The AJAX Spider has no progress bar, and it finished (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> Is it done? For some reason the progress bar doesn't appear on the AJAX Spider
+#### Verdict:
+No prior assumption - you asked whether it had finished. It had: it ran from 09:58:50 to 09:59:36 and stopped by itself.
+#### Explanation:
+The AJAX Spider explores by clicking through pages in a browser, so it can't know beforehand how many pages there are. That's why it shows no percentage, unlike the traditional Spider. ZAP's log says it stopped because it was "Exausted" (sic), meaning it had nothing new left to click, and only 2 browsers were launched, so the setting worked. It made 317 requests to 33 different paths, mostly the home page's product images plus API calls such as `/rest/products/search`, `/rest/admin/application-configuration` and `/api/Challenges/`. That's a shallow crawl. Together with your manual browsing and the traditional Spider, the Site Tree still covers the site well. A headless Firefox left over from the 08:54 crashed run was still using about 400 MB.
+
 ## Noted
 - juice_shop.md (unnumbered block after comment 17) - the re-run `--script safe` scan, this time against the correct host `132.248.185.212`; narration/evidence, nothing asserted.
 - juice_shop.md (comment 29) - "Now that I have a clearer guide on `Guia-OWASP-Juice-Shop.md` I can look it step by step"; narration, nothing asserted.
+- report.md (opening) - Docker version, `docker pull` and `docker run` of Juice Shop; narration/evidence, nothing asserted.
+- report.md - "Everything seems to be working well" after `nuclei -update-templates`; narration. That output doubles as Módulo 1's template-update capture.
+- report.md - "Now it is working" after unchecking Just In Scope; narration, covered by entry 49.
 
 ## Not addressed
 - none
