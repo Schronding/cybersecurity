@@ -1,13 +1,13 @@
 # Informe de Evaluación de Vulnerabilidades Web (Entorno de Laboratorio)
 
-**[Nombre de la Institución]** · **Asignatura:** Temas Selectos de Seguridad de la Información
+**ENES Juriquilla** · **Asignatura:** Temas Selectos de Seguridad Informática I
 
 | Campo | Detalle |
 | :---- | :---- |
 | **Proyecto / Sistema Evaluado** | OWASP Juice Shop (Instancia Local) |
 | **Versión del Documento** | 1.0 |
 | **Fecha de Evaluación** | 23–24/11/2026 |
-| **Equipo Auditor (Estudiantes)** | _[Nombres y Matrículas]_ |
+| **Autor** | Brayan Coronel Ramirez ; 421053263 |
 | **Marco de Referencia** | NIST Cybersecurity Framework (CSF) 2.0 & OWASP Top 10 |
 
 ---
