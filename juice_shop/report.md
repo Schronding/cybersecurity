@@ -278,11 +278,11 @@ error:
 
 With zap I am struggling a lot in finding the tools that Claude tells me, I have version 2.17, the latest, and I went to tools > client spider and selected the following 
 
-![client spider](image-5.png)
+![client spider](m2_client_spider_dialog.png)
 
 It doesn't allow me to run, as it says I need a valid starting point along with the protocol
 
-![error spider scan](image-6.png)
+![error spider scan](m2_client_spider_error_missing_scheme.png)
 
 I think the problem is that I am not putting the complete address 
 
@@ -290,11 +290,11 @@ Now it works, and it seems it went through everything fairly quickly, which is s
 
 I went through
 
-![AJAX spider](image-7.png)
+![AJAX spider](m2_ajax_spider_dialog_empty_context.png)
 
 but it is telling me that 
 
-![error ajax spider scan](image-8.png)
+![error ajax spider scan](m2_ajax_spider_error_not_in_scope.png)
 
 What is the scope in this scenario? I will uncheck that mark for now 
 
@@ -302,5 +302,110 @@ Now it is working
 
 IT seems it broke somewhere along the way, could this be by the poor hardware power of my machine? 
 
-![error during ajax spider scan](image-9.png)
+![error during ajax spider scan](m2_ajax_spider_crash_12_browsers.png)
+
+![rest folder screenshot](m2_site_tree_rest.png)
+
+![api folder screenshot](m2_site_tree_api.png)
+
+![option of persist session disabled](m2_zap_persist_session_disabled.png)
+
+![all the folders of the scans](m2_site_tree_root.png)
+
+![CSP Alert](m2_passive_csp_alert.png)
+
+![CSP Response](m2_passive_csp_response_headers.png)
+
+For what I understand all of these were simply mistakes of negligence by the programmers rather than a complex strange condition that opened a vulnerability. The CSP I think it should be just like any other HTML tag that you write in order to have that header. 
+
+![Cross-Domain misconfiguration alert](m2_passive_cors_alert.png)
+
+![cross-domain misconfiguration response](m2_passive_cors_response_headers.png)
+
+I don't understand why the AI told me to check on `GET /rest/products/search?q=` as that seems more like an HTTP request rather than a file I can click. Check `m2_passive_cors_alert.png` to see that doesn't appear. 
+
+I think the problem with this is that we allow every site to have a response from us (the juice shop) so I believe anyone can request private data and if we don't have guard rails for it we might just send it directly. 
+
+![information disclosure alert](m2_passive_jwt_localstorage_alert.png)
+
+![information disclosure response](m2_passive_jwt_localstorage_home_response.png)
+
+This problem is that by putting the JWT in localStorage (which is simply an array of strings that anyone can access in the browser) then we are giving anyone the opportunity to supplant the identity of the person who that cookie belongs to, allowing access in its account. 
+
+What does the colors state in the response? I see there are some which are highlighted in green and others in yellow. 
+
+![email visible in login](m2_passive_jwt_login_response.png)
+
+![scan policy](m2_active_scan_policy_moderada.png)
+
+![new policy scan moderada-media](m2_active_scan_policy_moderada_media.png)
+
+In products I have that what we sent is 
+
+```
+GET http://localhost:3000/rest/products/search?q=%27%28 HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.9
+Referer: http://localhost:3000/
+Authorization: Bearer eyJ.<JWT-SCRUBBED>
+Connection: keep-alive
+Cookie: language=en; welcomebanner_status=dismiss; cookieconsent_status=dismiss; token=eyJ.<JWT-SCRUBBED>; continueCode=8PVgMZE4p6L8NXYxJwoQ2vqjnG77cLCVS7QGKa3O71brWD5yzRBemkPl9VXW
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+```
+
+Responding 1: What ZAP sent and what came back
+I don't see what is actually being sent, I assume it is `GET http://localhost:3000/rest/products/search?q=%27%28 HTTP/1.1` so I think it is sending `q=2728` and that `%` are probably a type of separator. 
+
+What it sent back is a JSON that shows us that there is an error in the SQL
+
+```
+{
+  "error": {
+    "message": "SQLITE_ERROR: near \"(\": syntax error",
+    "stack": "Error: SQLITE_ERROR: near \"(\": syntax error",
+    "errno": 1,
+    "code": "SQLITE_ERROR",
+    "sql": "SELECT * FROM Products WHERE ((name LIKE '%'(%' OR description LIKE '%'(%') AND deletedAt IS NULL) ORDER BY name"
+  }
+}
+```
+
+2. Why that response suggests SQL injection.
+Because as it is checking the open parenthesis as an error of SQLite that probably means it is parsing whatever we enter directly, without safeguards, so we might put a query directly in there in order to retrieve data. 
+
+3. Why ZAP's confidence is only Low.
+Because we have only found the error, we haven't go all the way to insert a payload that actually breaks into the database. 
+
+Is there a way to put ZAP in night mode? Its white background, small text and icons is really forcing my sight to work hard.  
+
+Much better with the change in aspect. 
+
+```
+{
+  "error": {
+    "message": "SQLITE_ERROR: unrecognized token: \"value\"",
+    "stack": "Error\n    at Database.<anonymous> (/juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:185:27)\n    at /juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:183:50\n    at new Promise (<anonymous>)\n    at Query.run (/juice-shop/node_modules/sequelize/lib/dialects/sqlite/query.js:183:12)\n    at /juice-shop/node_modules/sequelize/lib/sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+    "name": "SequelizeDatabaseError",
+    "parent": {
+      "errno": 1,
+      "code": "SQLITE_ERROR",
+      "sql": "SELECT * FROM Users WHERE email = ''' AND password = 'value' AND deletedAt IS NULL"
+    },
+    "original": {
+      "errno": 1,
+      "code": "SQLITE_ERROR",
+      "sql": "SELECT * FROM Users WHERE email = ''' AND password = 'value' AND deletedAt IS NULL"
+    },
+    "sql": "SELECT * FROM Users WHERE email = ''' AND password = 'value' AND deletedAt IS NULL",
+    "parameters": {}
+  }
+}
+```
+
+It seems that in order to paste the email there are two single quotes waiting for it, as we put another one we get a third and SQL fails because there are no complete pairs of symbols. I replaced the actual hash with 'value' in order to not expose the password I put
 

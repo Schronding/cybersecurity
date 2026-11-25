@@ -432,13 +432,13 @@ Partly correct - Client Spider is a real ZAP 2.17 tool, but it isn't the traditi
 #### Explanation:
 The traditional one is Tools → Spider... (or right-click the site → Attack → Spider...). It reads the HTML the server returns and doesn't run JavaScript. AJAX Spider and Client Spider both drive a real browser; the Client Spider is ZAP's newer one. The guide asks for "Spider tradicional y AJAX Spider", so those are the two to run and screenshot.
 
-### 47. The starting point needs the scheme (report.md - image-5, image-6) [Correct]
+### 47. The starting point needs the scheme (report.md - m2_client_spider_dialog, m2_client_spider_error_missing_scheme) [Correct]
 #### User's Discovery/Doubt:
 > It doesn't allow me to run, as it says I need a valid starting point along with the protocol
 
 > I think the problem is that I am not putting the complete address
 #### Verdict:
-Correct - image-5 has `127.0.0.1:3000`, which is a host and port, not a URL. ZAP needs the scheme, `http://127.0.0.1:3000`, as image-7 shows. It's the same root cause as nuclei's `http:127.0.0.1:3000` in entry 38.
+Correct - m2_client_spider_dialog has `127.0.0.1:3000`, which is a host and port, not a URL. ZAP needs the scheme, `http://127.0.0.1:3000`, as m2_ajax_spider_dialog_empty_context shows. It's the same root cause as nuclei's `http:127.0.0.1:3000` in entry 38.
 
 ### 48. The Client Spider was fast because it barely crawled (report.md) [Mechanism]
 #### User's Discovery/Doubt:
@@ -448,21 +448,21 @@ Partly correct - the suspicion is right, but it didn't go through everything. Ju
 #### Explanation:
 That's the start page and the files it loads, not a crawl. At startup ZAP's log shows "Failed to get or create Firefox profile zap-client-profile", the browser profile the Client Spider uses, so it likely never got to explore (inferred, not verified). You're right that the AJAX Spider needs more resources, because it runs real browsers (entry 50).
 
-### 49. Scope is the part of the web you tell ZAP is your target (report.md - image-7, image-8) [Mechanism]
+### 49. Scope is the part of the web you tell ZAP is your target (report.md - m2_ajax_spider_dialog_empty_context, m2_ajax_spider_error_not_in_scope) [Mechanism]
 #### User's Discovery/Doubt:
 > What is the scope in this scenario? I will uncheck that mark for now
 #### Verdict:
 No prior assumption about what scope is. Unchecking works, but the better fix is to put the site in scope.
 #### Explanation:
-In ZAP, scope is the set of URLs in a Context marked "in scope". Image-7 shows an empty Context field, so nothing was in scope and "Just In Scope" rejected the start URL (image-8). Here the scope should be exactly `http://127.0.0.1:3000`: right-click it in Sites → Include in Context → Default Context. That's also the Context the guide's Phase 3 asks you to define, and it keeps the Google domains your browser contacted out of scans. With the box unchecked, "Spider Subtree Only" still kept the crawl under `http://127.0.0.1:3000`.
+In ZAP, scope is the set of URLs in a Context marked "in scope". m2_ajax_spider_dialog_empty_context shows an empty Context field, so nothing was in scope and "Just In Scope" rejected the start URL (m2_ajax_spider_error_not_in_scope). Here the scope should be exactly `http://127.0.0.1:3000`: right-click it in Sites → Include in Context → Default Context. That's also the Context the guide's Phase 3 asks you to define, and it keeps the Google domains your browser contacted out of scans. With the box unchecked, "Spider Subtree Only" still kept the crawl under `http://127.0.0.1:3000`.
 
-### 50. The AJAX Spider broke on 12 browsers, not on a weak machine (report.md - image-9) [Mechanism]
+### 50. The AJAX Spider broke on 12 browsers, not on a weak machine (report.md - m2_ajax_spider_crash_12_browsers) [Mechanism]
 #### User's Discovery/Doubt:
 > IT seems it broke somewhere along the way, could this be by the poor hardware power of my machine?
 #### Verdict:
 Partly correct - resources likely played a part, but the cause is a setting: ZAP was told to open 12 browsers.
 #### Explanation:
-The AJAX Spider's "Number of Browser Windows to Open" was 12, one per CPU core on your machine, since you hadn't opened the advanced options. ZAP's log shows it launching headless Firefox roughly every 15 seconds from 08:50. The 12th didn't start in time (`TimeoutException`), and the crawl aborted with the image-9 message. Your WSL VM has 7.4 GiB of RAM and swap was nearly full (1.6 of 2.0 GiB), which fits browsers starting too slowly (inferred). The run wasn't wasted: ZAP recorded about 300 requests from it before it stopped, and they're in the Sites tree even though ZAP counts 0 AJAX Spider results. Re-run with Show Advanced Options → 1 or 2 browser windows and a 10-minute maximum duration.
+The AJAX Spider's "Number of Browser Windows to Open" was 12, one per CPU core on your machine, since you hadn't opened the advanced options. ZAP's log shows it launching headless Firefox roughly every 15 seconds from 08:50. The 12th didn't start in time (`TimeoutException`), and the crawl aborted with the m2_ajax_spider_crash_12_browsers message. Your WSL VM has 7.4 GiB of RAM and swap was nearly full (1.6 of 2.0 GiB), which fits browsers starting too slowly (inferred). The run wasn't wasted: ZAP recorded about 300 requests from it before it stopped, and they're in the Sites tree even though ZAP counts 0 AJAX Spider results. Re-run with Show Advanced Options → 1 or 2 browser windows and a 10-minute maximum duration.
 
 ### 51. What spidering is and how to run it (chat) [Lookup]
 #### User's Discovery/Doubt:
@@ -515,12 +515,215 @@ No prior assumption - you asked whether it had finished. It had: it ran from 09:
 #### Explanation:
 The AJAX Spider explores by clicking through pages in a browser, so it can't know beforehand how many pages there are. That's why it shows no percentage, unlike the traditional Spider. ZAP's log says it stopped because it was "Exausted" (sic), meaning it had nothing new left to click, and only 2 browsers were launched, so the setting worked. It made 317 requests to 33 different paths, mostly the home page's product images plus API calls such as `/rest/products/search`, `/rest/admin/application-configuration` and `/api/Challenges/`. That's a shallow crawl. Together with your manual browsing and the traditional Spider, the Site Tree still covers the site well. A headless Firefox left over from the 08:54 crashed run was still using about 400 MB.
 
+### 56. "Persist Session" is greyed out because the session is already saved (report.md - m2_zap_persist_session_disabled) [Mechanism]
+#### User's Discovery/Doubt:
+> ![option of persist session disabled](m2_zap_persist_session_disabled.png)
+#### Verdict:
+No prior assumption - the screenshot only records that the option was disabled. Nothing is wrong: ZAP greys it out once a session is already being saved to disk.
+#### Explanation:
+ZAP was restarted at 16:17, and at start-up it saves the session automatically. ZAP's API reports it at `~/.ZAP/sessions/20261124-161703.session`. "Persist Session…" exists only to turn an unsaved session into a saved one, so it's disabled here. Everything recorded since 16:17 is written to that file as it happens, which includes your manual browsing (2099 requests), both spiders, and their alerts. To reopen it after a restart, use File → Open Session… and pick that file. The earlier 16:08 session was a different one. It was never saved, which is why the morning's work disappeared from ZAP.
+
+### 57. Unprompted correction: the `.git`, `.svn` and `.DS_Store` nodes aren't exposed files (report.md - m2_site_tree_rest, m2_site_tree_api) [Mechanism]
+#### User's Discovery/Doubt:
+> (no comment; the Site Tree screenshots show `.git`, `.svn` and `GET:.DS_Store` under both `/rest` and `/api`)
+#### Verdict:
+Not a finding - ZAP requested those paths itself, and Juice Shop answers every one of them with an error.
+#### Explanation:
+The traditional Spider has dedicated parsers that probe each folder for `.git`, `.svn` and `.DS_Store` metadata. Those files can leak source code or file listings when a server exposes them by mistake. Every probe adds a node to the Sites tree, whether the file exists or not. Verified with curl: `/rest/.git/config`, `/api/.svn/entries`, `/rest/.DS_Store` and `/api/.DS_Store` all return `500 Internal Server Error`, an error page and no file content. Leave them out of the findings. The `500` itself is the same verbose error page you already documented (entry 17).
+
+### 58. CSP is an HTTP response header, and Juice Shop leaves it out on purpose (report.md - m2_passive_csp_alert, m2_passive_csp_response_headers) [Mechanism]
+#### User's Discovery/Doubt:
+> For what I understand all of these were simply mistakes of negligence by the programmers rather than a complex strange condition that opened a vulnerability. The CSP I think it should be just like any other HTML tag that you write in order to have that header.
+#### Verdict:
+Partly correct - in a real app a missing CSP usually is an omission rather than a complex bug. But CSP is set by the server as an HTTP header, not written as an HTML tag, and in Juice Shop it's missing deliberately.
+#### Explanation:
+CSP is the `Content-Security-Policy:` line that the server adds to each response, next to `X-Frame-Options` and the others you see in m2_passive_csp_response_headers. It tells the browser where scripts, styles and images may be loaded from. In Express it's typically added with one middleware, e.g. `helmet.contentSecurityPolicy({...})`. There is also an HTML version, `<meta http-equiv="Content-Security-Policy" content="...">`, but it's weaker: it can't use `frame-ancestors` or reporting, and it only covers that one page. So at the HTTP level the root cause is that the server never adds the header to any response, which is why ZAP marks the alert "Systemic". Juice Shop is intentionally vulnerable, so in the report write "the application doesn't send it" rather than "the developers forgot". Your list also includes a second CSP alert, "CSP: Failure to Define Directive with No Fallback". That one means at least one route does send a CSP, just an incomplete one.
+
+### 59. Every node in ZAP is an HTTP request, and that search wasn't listed under the alert (report.md - m2_passive_cors_alert) [Mechanism]
+#### User's Discovery/Doubt:
+> I don't understand why the AI told me to check on `GET /rest/products/search?q=` as that seems more like an HTTP request rather than a file I can click. Check `m2_passive_cors_alert.png` to see that doesn't appear.
+#### Verdict:
+Partly correct - you're right that it didn't appear, and that was my mistake. But "HTTP request" and "file I can click" aren't different things in ZAP: every entry in the Sites and Alerts trees is an HTTP request.
+#### Explanation:
+`GET:polyfills.js` in m2_passive_cors_alert is just as much a request as the search: the method (`GET`) followed by the path. Some paths happen to end in a file name, and others like `/rest/products/search?q=` are API calls, but both are request/response pairs you can click. The search wasn't there because the alert is marked **(Systemic)**. When the same problem appears on almost every response, ZAP lists only about 5 example instances instead of 1400+. You don't lose anything by using `polyfills.js` (m2_passive_cors_response_headers), because the evidence is identical: `Access-Control-Allow-Origin: *`. If you want the search response anyway, use History → filter, or right-click any node → Open/Resend with Request Editor.
+
+### 60. `Access-Control-Allow-Origin: *` lets other sites read responses, not request private data (report.md - m2_passive_cors_alert, m2_passive_cors_response_headers) [Mechanism]
+#### User's Discovery/Doubt:
+> I think the problem with this is that we allow every site to have a response from us (the juice shop) so I believe anyone can request private data and if we don't have guard rails for it we might just send it directly.
+#### Verdict:
+Partly correct - the header does let every website read Juice Shop's responses. But CORS doesn't decide who can make requests, and with `*` the browser won't attach the user's credentials, so private data isn't directly exposed through it.
+#### Explanation:
+Anyone can always send requests to a server with curl, ZAP, or a script, and CORS has no effect on that. CORS is a rule the browser enforces: when JavaScript from `evil.com` calls `localhost:3000`, the browser hands it the response only if that response carries an `Access-Control-Allow-Origin` header allowing `evil.com`. `*` allows every site. However, browsers refuse to combine `*` with credentials (cookies or HTTP authentication). Also, Juice Shop's login token sits in `localStorage` and is sent as an `Authorization: Bearer` header, and `evil.com` can't read another site's localStorage. So a malicious site can read anything that doesn't need a login, such as the product list, search results, `/api-docs` and `/metrics`. It can't read the victim's basket. Root cause at the HTTP level: the server adds `Access-Control-Allow-Origin: *` to every response instead of listing only its own trusted origins. That's why ZAP rates it Medium with only Medium confidence. The impact depends on what's readable without logging in.
+
+### 61. localStorage is per-site, and the real risk is XSS (report.md - m2_passive_jwt_localstorage_alert, m2_passive_jwt_localstorage_home_response) [Mechanism]
+#### User's Discovery/Doubt:
+> This problem is that by putting the JWT in localStorage (which is simply an array of strings that anyone can access in the browser) then we are giving anyone the opportunity to supplant the identity of the person who that cookie belongs to, allowing access in its account.
+#### Verdict:
+Partly correct - a stolen JWT does let someone impersonate the user. But localStorage isn't readable by "anyone", only by JavaScript running on `localhost:3000`, so the threat is an XSS on Juice Shop itself. m2_passive_jwt_localstorage_home_response also doesn't show the HTTP evidence.
+#### Explanation:
+localStorage is a key → value store kept **per origin**, so other websites can't read `localhost:3000`'s storage. What can read it is any script running inside Juice Shop's pages, including one injected through XSS (Juice Shop has several). A cookie marked `HttpOnly` can't be read by scripts at all, and that's the protection the guide's "cookies (HttpOnly, SameSite)" is about.
+
+The HTTP root cause is in your login, ZAP history message 70: `POST /rest/user/login` → `200 OK` with **no `Set-Cookie` header**, and the token comes back in the JSON body as `{"authentication":{"token":"eyJ…","bid":6,"umail":"juice@test.com"}}`. Since the server never sets a cookie, it can never mark one `HttpOnly`, `Secure` or `SameSite`. The page's JavaScript stores the token in localStorage itself, and it also creates a `token` cookie that later requests send (verified: `Cookie: language; welcomebanner_status; cookieconsent_status; token`). That cookie is just as readable by scripts. m2_passive_jwt_localstorage_home_response is the home page's HTML. ZAP found this alert by inspecting the browser's storage at `/#/search`, not in that response, so take the screenshot of message 70's response instead.
+
+One more thing makes stealing this token worse. A JWT's middle part is plain Base64 (encoded, not encrypted), and yours contains a `"password"` field: the user's unsalted MD5 hash `827ccb0eea8a706c4c34a16891f84e7b`, which is the well-known MD5 of `12345`. So a stolen token gives away the password as well as the session. That's worth noting as a related finding (CWE-522 / CWE-916).
+
+### 62. The green and yellow backgrounds are syntax highlighting, not findings (report.md) [Lookup]
+#### User's Discovery/Doubt:
+> What does the colors state in the response? I see there are some which are highlighted in green and others in yellow.
+#### Verdict:
+No prior assumption - the colors carry no security meaning. ZAP's body viewer marks code in a different language embedded inside the HTML.
+#### Explanation:
+ZAP's response viewer colors code by language. Inside an HTML page, the CSS in `<style>` blocks gets a green background, and the JavaScript in `<script>` blocks gets a yellow background (images 15 and 19). A solid grey highlight is different: in m2_passive_cors_response_headers, `Access-Control-Allow-Origin: *` is grey because ZAP selects an alert's **Evidence** in the response when you click one of its instances. That grey highlight is the one worth capturing in screenshots.
+
+### 63. The "frozen" ZAP was a hidden dialog, not a crash (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> Zap sometimes has small windows hidden that seem to have frozen the program, but as I found it I only close it.
+#### Verdict:
+Correct - a small window that blocks ZAP until you close it is a modal dialog, and closing it does unfreeze ZAP. Closing it with the X counts as "Cancel" for whatever it was asking.
+#### Explanation:
+A modal dialog (a confirmation, an options window, a "scan finished" notice) takes over all input until it's answered, so the main window stops reacting to clicks while it's open. On WSL, Linux windows are drawn by WSLg, and a new dialog sometimes opens behind ZAP's main window or without focus, so ZAP looks frozen. Alt+Tab or the Windows taskbar usually shows it. ZAP's log confirms nothing crashed: after 16:35 the only warning is one browser start-up message during the active scan, and the process has been the same since 16:16. If a dialog was asking about something you wanted (for example, starting a scan), closing it with the X cancelled that action.
+
+### 64. Two active scans run in parallel, not in a queue (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> I ran both scans simultaneously, does Zap queue them or they are done in parallel assuming the hardware allows it?
+#### Verdict:
+No prior assumption - you asked which it was. They ran in parallel.
+#### Explanation:
+ZAP starts each active scan as soon as you launch it, each with its own threads, and ZAP's active-scan options have no queue setting (verified in its API). Your scans' traffic proves it. Scan 0 (search) sent requests from 17:08:45 to 17:10:11, and scan 1 (login) from 17:09:38 to 17:10:35, so they overlapped for 33 seconds. Both finished at 100%. Parallel scans add up: two scans with N threads each can put up to 2×N requests on the same server, which matters for the guide's traffic control (entry 65).
+
+### 65. More threads didn't make this scan faster; the delay set the pace (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> Remember that I am in a more powerful computer, so I have deliberately putting higher numbers in the amount of threads we use at each step
+#### Verdict:
+Partly correct - with Juice Shop on the same machine, a stronger computer does give the target more room. But the 16 threads had no effect here, and the guide's rate limits are about protecting the target, not about how strong the scanning machine is.
+#### Explanation:
+ZAP's "threads per host" lets it scan several **nodes** (URLs) of the site at the same time. Each of your scans targeted a single node with Recurse off, so there was nothing to split between threads. Measured from the scans' traffic, there were never more than **2 requests in flight at once**, even counting both scans together, compared with 16 configured. What actually limited the speed was the 100 ms delay. Juice Shop answered in about 5 ms on average, so each scan ran at about 1 request per delay: ≈3.8 req/s (search) and ≈7.6 req/s (login). In general, rate limiting exists so that a scan doesn't overload or disrupt the **target**, and in a real engagement the target is someone else's production server, however strong your laptop is. The rubric grades this ("omite ajustes de control de tasa" drops you to 80%), so the deliverable states the configured values (16 threads, 100 ms) together with the measured rates. If you later scan the whole tree with Recurse on, 16 threads would really mean up to 16 parallel requests per scan.
+
+### 66. Unprompted correction: the login screenshot shows the full token (report.md - m2_passive_jwt_login_response) [Lookup]
+#### User's Discovery/Doubt:
+> ![email visible in login](m2_passive_jwt_login_response.png)
+#### Verdict:
+Right evidence, but it can't go into the deliverable as it is. The guide asks for cropped screenshots "sin datos sensibles expuestos", and this one shows the whole JWT.
+#### Explanation:
+The screenshot is the response entry 61 asked for, and it shows the key evidence: the token comes back in the JSON body, and there's no `Set-Cookie` header. The email is incidental. The full token is the sensitive part, since anyone holding it can act as that user until it expires, and its middle part contains the password hash (entry 61). In `deliverable.md` I used the same response as a text block with the token cut (`"eyJ0eXAi…[JWT omitido]…"`). If you'd rather show the screenshot, black out the token's lines first.
+
+### 67. Unprompted correction: Juice Shop was published on every interface, not only 127.0.0.1 (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> (no comment; `docker ps` showed `0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp`, and `ss` showed Juice Shop listening on `0.0.0.0:3000`)
+#### Verdict:
+Out of line with the guide's isolation rule - the container that ran during Modules 1 and 2 accepted connections on every network interface, not just the local loopback.
+#### Explanation:
+`-p 3000:3000` publishes the port on `0.0.0.0`, which means every network interface of the machine. `-p 127.0.0.1:3000:3000`, the guide's command, publishes it only on loopback, so nothing outside the machine can reach it. The command in report.md includes `127.0.0.1`, and its stray backslashes (`\--rm \-p`) are harmless, since bash reads `\-p` as `-p`. So the container that actually ran was started with a different command. The likely source is `Guia-OWASP-Juice-Shop.md`, whose "Despliegue Rápido" uses `-p 3000:3000` (inferred; the shell history wasn't checked). For an intentionally vulnerable app this matters: anyone on the same network could have used it. The container has since stopped, and with `--rm` it was also removed. Relaunch it with `docker run --rm -p 127.0.0.1:3000:3000 bkimminich/juice-shop`, then confirm with `docker ps`, which should show `127.0.0.1:3000->3000/tcp`. The deliverable's Annex A has a pending note to update once that's done.
+
+### 68. Why the search scan found nothing although the search is injectable (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> (no comment; active scan 0 against `GET /rest/products/search?q=` finished with 0 alerts)
+#### Verdict:
+Not a sign that the search is safe - the requests that broke the SQL were sent by rules that don't look for SQL errors, and the SQL Injection rule's own probe didn't break anything.
+#### Explanation:
+The SQL Injection rule (40018) checks a parameter by sending a single `'` and watching for an error. Against the search, `q='` returns `200 {"status":"success","data":[]}` (verified with curl), so the rule saw nothing wrong. Juice Shop builds the search query by inserting your text into **two** places, so a lone quote gets a partner from the other insertion and the SQL remains valid. This was first inferred from Juice Shop's source, then verified by the error the server itself returned (entry 70): `SELECT * FROM Products WHERE ((name LIKE '%'(%' OR description LIKE '%'(%') AND deletedAt IS NULL) ORDER BY name`. Payloads with other shapes did break it: 30 responses in that scan are `500` with `SQLITE_ERROR` (for example `' and 0 in (select sleep(15)) -- `). But those came from rules that only check timing or other signs, not SQL error text. The login puts `email` into the query only once, so the same `'` broke it and ZAP raised SQL Injection there. These `500`/`SQLITE_ERROR` responses are what Module 3 will confirm with sqlmap.
+
+### 69. The Medium scan did flag the search, but as a suspicion, not a confirmation (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> I don't really see anything different in the alerts. The off-site redirect and SQL injection were already there so it seems that on this level of strength we suspect SQL injection but we have not really found a payload that actually confirms that vulnerability. While I know it is true, as I have tried the OR 1=1 trick manually with success before, for now the automated scan has not able to penetrate it, which is correct, as we're doing just some scouting and not all the way pen-testing
+#### Verdict:
+Partly correct - "suspected, not confirmed" is exactly what ZAP's alert says, and confirming it is Module 3's job. But something did change: there's a new SQL Injection alert on the **search** (`q`). And the scan's purpose was detection, not penetration, so it didn't fall short.
+#### Explanation:
+ZAP's Alerts tab groups alerts by **name**. The new instance went under the "SQL Injection" entry that already existed, which looks the same until you expand it. That entry now has two instances:
+- `POST /rest/user/login`, parameter `email` (Low-strength run).
+- `GET /rest/products/search`, parameter `q`, attack `'(`, evidence `500` with `SQLITE_ERROR: near "(": syntax error` (message 5329, new).
+
+At Medium strength the rule tries more payload shapes. `'(` works where a lone `'` didn't (entry 68): the doubled quote still balances, but the extra `(` doesn't, so SQLite raises a syntax error.
+
+Your reading of the confidence is right. The alert is **High risk, Low confidence**: ZAP saw that a quote character crashes the query, which strongly suggests unsanitised input reaches the SQL, but it didn't prove control over the query's logic. Proof would be a true/false pair returning different results, or a measurable delay. sqlmap's boolean-based checks in Module 3 provide exactly that, without extracting any data.
+
+The "scouting" framing needs one adjustment. An active scan isn't passive scouting: it sent 396 attack requests. Its goal is to **detect** likely vulnerabilities, not to exploit them, and ZAP never tries to log in as someone else or dump data. So it did what it's meant to do. Your `OR 1=1` login bypass is the step beyond detection, **exploitation**. The guide's non-invasive rule asks you to stop before that in this assignment, so don't use it as evidence in the deliverable.
+
+### 70. `%27%28` is URL encoding for `'(`, not the number 2728 (chat via report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> I don't see what is actually being sent, I assume it is `GET http://localhost:3000/rest/products/search?q=%27%28 HTTP/1.1` so I think it is sending `q=2728` and that `%` are probably a type of separator.
+#### Verdict:
+Wrong - `%` isn't a separator. It introduces one character written as two hexadecimal digits, so `%27%28` is `'(`, the attack ZAP reports.
+#### Explanation:
+URLs may only contain a limited set of characters, so anything else is **percent-encoded**: `%` followed by the character's byte value in hex. `0x27` is `'` and `0x28` is `(`. Other common ones are `%20` (space), `%22` (`"`) and `%3D` (`=`). The server decodes them before using the value, so Juice Shop received `q='(`. The alert details show the decoded form in the **Attack** field. The response you copied confirms it, because the server echoed the query it tried to run:
+```
+SELECT * FROM Products WHERE ((name LIKE '%'(%' OR description LIKE '%'(%') AND deletedAt IS NULL) ORDER BY name
+```
+Your input `'(` appears **twice**, pasted straight into the SQL text. That proves what entry 68 had only inferred. That response is also a finding of its own: it hands any visitor the exact SQL statement, table and column names. That's the "Application Error Disclosure" alert in your passive list (56 instances), and it's what makes this injection easy to exploit.
+
+### 71. Why the error points to SQL injection (chat via report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> Because as it is checking the open parenthesis as an error of SQLite that probably means it is parsing whatever we enter directly, without safeguards, so we might put a query directly in there in order to retrieve data.
+#### Verdict:
+Correct - the input becomes part of the SQL code instead of staying data, and that is what would let an attacker change the query. One refinement on how to put it.
+#### Explanation:
+The precise evidence: `'` and `(` mean nothing special in a product name, yet they changed how SQLite **parsed** the statement. With a parameterized query (`... LIKE ?` with the value passed separately), the database treats the whole input as text. You'd get `200` with an empty list, never a syntax error. The `"sql"` field in the error shows the input pasted literally into the string, which rules out parameterization. On "retrieve data": that's the **impact** if exploited (for example appending a `UNION SELECT`), and it belongs in the risk estimate. For this assignment, demonstrating it stops at proving the query's logic can be altered (Module 3).
+
+### 72. Low confidence because ZAP only saw a crash, not control (chat via report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> Because we have only found the error, we haven't go all the way to insert a payload that actually breaks into the database.
+#### Verdict:
+Partly correct - Low confidence does come from having only an error. But the missing proof isn't "breaking into" the database; it's showing that the injected input changes the query's **result** in a predictable way.
+#### Explanation:
+The evidence ZAP recorded for both SQL Injection instances is just the status line, `HTTP/1.1 500 Internal Server Error`. A 500 after a quote character is a strong hint, but a server can also crash on odd input for reasons unrelated to SQL, so ZAP marks it Low. Higher confidence needs a **differential**: two payloads that are logically true and false (e.g. `' AND 1=1` vs `' AND 1=2`, adapted to this query's shape) giving consistently different responses, or a payload that adds a measurable delay. Neither reads or changes any data, which is why it fits the non-invasive rule. sqlmap automates exactly that in Module 3. Strictly, the SQLite message in the body is already near-conclusive to a human. ZAP's confidence reflects only what its own rule could verify.
+
+### 73. ZAP has a dark theme and a font size setting (chat via report.md) [Lookup]
+#### User's Discovery/Doubt:
+> Is there a way to put ZAP in night mode? Its white background, small text and icons is really forcing my sight to work hard.
+#### Verdict:
+No prior assumption - yes, both exist under Tools → Options → Display.
+#### Explanation:
+In **Tools → Options → Display**:
+- **Look and Feel:** choose a dark theme such as **Flat Dark** or **Flat Darcula**.
+- **Font:** raise the size (e.g. 14–16).
+
+Restart ZAP afterwards, because some parts only pick up the change on restart. Reopen the session with File → Open Session… (the path is in entry 56), since a restart can start an empty session, as happened this morning. The dialogs ZAP opens on WSL may still be small. If the icons stay tiny, the Java scaling flag `-Dsun.java2d.uiScale=2` enlarges everything; it's set where ZAP is launched (inferred, not tried here).
+
+### 74. The login breaks on one quote because the input sits in a single-quoted value (chat via report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> It seems that in order to paste the email there are two single quotes waiting for it, as we put another one we get a third and SQL fails because there are no complete pairs of symbols.
+#### Verdict:
+Correct - the login query wraps `email` in one pair of quotes, so a third quote leaves the string unterminated.
+#### Explanation:
+The leaked query is `SELECT * FROM Users WHERE email = ''' AND password = '...'`. The `''` is the empty value waiting for input; your `'` makes three, so the string literal never closes and SQLite errors on the unrecognized token. This is why a lone `'` breaks the **login** but not the **search** (entry 68): login inserts the input once (one pair of quotes), search twice, so in the search the quotes re-pair and you need `'(`. Same flaw, different query shape; that difference is the point of comparing the two active alerts.
+
+### 75. The hash is a reversible-by-lookup MD5, which is why it's a weakness (chat via report.md) [Mechanism]
+#### User's Discovery/Doubt:
+> Also the hash seems to be the hash of the password I entered ... looking at it online could probably retrieve its actual value. Indeed when I look at MD5 hash it provides the actual pass
+#### Verdict:
+Correct - it's the unsalted MD5 of your password, and unsalted MD5 of a common password is in every lookup table.
+#### Explanation:
+The query compares `password` against the MD5 of what you typed, so Juice Shop stores unsalted MD5 (CWE-916). "Unsalted" means the same password always yields the same hash, so precomputed tables reverse common ones instantly; a salt would make each hash unique and defeat the lookup. This connects to entry 61: the same hash rides inside the JWT, so a stolen token also leaks the (weakly hashed) password. Note for the report: confirming your own test password is fine, but don't paste recovered plaintext of any seeded account into the deliverable.
+
+### 76. sqlmap confirmed the injection only after raising level/risk, and that escalation is the finding (chat) [Mechanism]
+#### User's Discovery/Doubt:
+> (no comment; sqlmap confirmed `email` injectable, boolean-based blind, SQLite 3.44.2, after level=3/risk=3)
+#### Verdict:
+Confirmed, non-invasively - and the three failed runs before it are evidence worth keeping, not noise.
+#### Explanation:
+The deliverable's point isn't just the final success; it's the reasoning path. Minimum settings (`--level=1 --risk=1`, as the guide's wording suggests) reported "not injectable" four times, because:
+- **Search (`q`), level 1:** the input is inserted twice, so a lone `'` re-pairs and the AND-based boolean test sees a stable page.
+- **Login (`email`), risk 1-2:** the AND-based test uses a fake email, so its true and false branches both return 401 - no observable difference.
+- The payload that works is **OR-based** (`' OR NOT 8716=8716-- `), which flips the login between a user row (not 401) and none (401). OR-based boolean payloads are gated behind `--risk=3`, and the fuller payload set behind `--level=3`.
+
+Confirmation evidence: parameter `email`, technique **boolean-based blind** (OR ... NOT variant), back-end DBMS **SQLite 3.44.2**, in 115 requests. It stayed within the non-invasive rule: `--technique=B` (no time-based load, no UNION), no `--dump`/`--tables`/`--columns`, and `--banner` read only the version string, which the guide explicitly permits. `--ignore-code=401` was needed because the app answers failed logins with 401, which sqlmap otherwise reads as "not authenticated" and aborts.
+
+Theory for the report: the parameter is unsanitised and concatenated into `SELECT * FROM Users WHERE email = '<input>' AND password = '<hash>'`. The injected `'` closes the string early and `OR NOT 8716=8716` plus `-- ` comments out the rest, so the WHERE clause's truth value is controlled by the attacker, not by the credentials. That is what sqlmap's boolean-based technique measures: two inputs that differ only in a logical condition produce two different responses.
+
+Evidence files in `sqlmap_out/`: `sqlmap_console_login_2026-11-24.txt` (annotated console), and `localhost/{log,target.txt,session.sqlite}`.
+
 ## Noted
 - juice_shop.md (unnumbered block after comment 17) - the re-run `--script safe` scan, this time against the correct host `132.248.185.212`; narration/evidence, nothing asserted.
 - juice_shop.md (comment 29) - "Now that I have a clearer guide on `Guia-OWASP-Juice-Shop.md` I can look it step by step"; narration, nothing asserted.
 - report.md (opening) - Docker version, `docker pull` and `docker run` of Juice Shop; narration/evidence, nothing asserted.
 - report.md - "Everything seems to be working well" after `nuclei -update-templates`; narration. That output doubles as Módulo 1's template-update capture.
 - report.md - "Now it is working" after unchecking Just In Scope; narration, covered by entry 49.
+- chat - "I already did some quick exploration and also put localhost:3000 on context"; narration. Verified: 158 requests recorded (register, login, search, basket, checkout), and Default Context includes `http://localhost:3000.*`. ZAP treats `localhost` and `127.0.0.1` as two different sites, so later steps use `localhost:3000` throughout.
+- chat - "My Zap is failing, I will restart it, can you confirm we have all the data we need? I would prefer it it was stored directly on this repo"; request. ZAP wasn't actually restarted (same process since 16:16). Its data is exported to `zap_snapshot/` as readable files (site tree, spider results, passive alerts, full HAR, context, policy, both active scans' alerts and traffic, and a ZAP Markdown report). The 100 MB session database stays in `~/.ZAP/sessions/`.
+- report.md - m2_active_scan_policy_moderada (scan policy screenshot); narration. Verified: default threshold Medium, default strength Low, and every category shows "Default", meaning it inherits those values. So the "Go" buttons from my instructions weren't needed.
+- chat - screenshots `image-5` … `image-21` renamed on 2026-11-24 to descriptive `m2_*` names; references in report.md and this file updated. `image.png` and `image-1` … `image-4` belong to juice_shop.md and keep their names.
+- chat - Juice Shop relaunched; verified `docker ps` shows `127.0.0.1:3000->3000/tcp`, resolving entry 67. From here on, reflections arrive in the chat instead of report.md and are logged here as (chat) entries.
+- report.md - m2_active_scan_policy_moderada_media (new `Moderada-Media` policy screenshot, saved by VS Code as `image-5.png` and renamed); narration. Verified: threshold Medium, strength Medium, categories inherit. The request pasted above it contains two full session JWTs; the repo has a GitHub remote, so truncate them before pushing.
 
 ## Not addressed
 - none

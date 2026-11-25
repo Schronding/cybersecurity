@@ -1,0 +1,1010 @@
+{
+ "target": "GET http://localhost:3000/rest/products/search?q=",
+ "policy": "Moderada-Media (threshold MEDIUM, strength MEDIUM)",
+ "scan": [
+  {
+   "reqCount": "399",
+   "alertCount": "13",
+   "progress": "100",
+   "newAlertCount": "13",
+   "id": "0",
+   "state": "FINISHED"
+  }
+ ],
+ "alerts": [
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "HTTP/1.1 500 Internal Server Error",
+   "pluginId": "40018",
+   "cweid": "89",
+   "confidence": "Low",
+   "sourceMessageId": 3793,
+   "wascid": "19",
+   "description": "SQL injection may be possible.",
+   "messageId": "5329",
+   "inputVector": "querystring",
+   "url": "http://localhost:3000/rest/products/search?q=%27%28",
+   "tags": {
+    "POLICY_SEQUENCE": "",
+    "OWASP_2021_A03": "https://owasp.org/Top10/2021/A03_2021-Injection/",
+    "PCI_DSS": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#compliance",
+    "CWE-89": "https://cwe.mitre.org/data/definitions/89.html",
+    "POLICY_QA_CICD": "",
+    "POLICY_DEV_CICD": "",
+    "OWASP_2025_A05": "https://owasp.org/Top10/2025/A05_2025-Injection/",
+    "WSTG-v42-INPV-05": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection",
+    "POLICY_API": "",
+    "POLICY_DEV_FULL": "",
+    "POLICY_QA_STD": "",
+    "POLICY_QA_FULL": "",
+    "POLICY_PENTEST": "",
+    "HIPAA": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#compliance",
+    "OWASP_2017_A01": "https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html",
+    "API_2023_API10": "https://owasp.org/API-Security/editions/2023/en/0xaa-unsafe-consumption-of-apis/",
+    "POLICY_DEV_STD": ""
+   },
+   "reference": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+   "solution": "Do not trust client side input, even if there is client side validation in place.\nIn general, type check all data on the server side.\nIf the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'\nIf the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.\nIf database Stored Procedures can be used, use them.\nDo *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!\nDo not create dynamic SQL queries using simple string concatenation.\nEscape all data received from the client.\nApply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.\nApply the principle of least privilege by using the least privileged database user possible.\nIn particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.\nGrant the minimum database access that is necessary for the application.",
+   "alert": "SQL Injection",
+   "param": "q",
+   "attack": "'(",
+   "name": "SQL Injection",
+   "risk": "High",
+   "id": "4635",
+   "alertRef": "40018"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5554",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4636",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5556",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4637",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5558",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4638",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5560",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4639",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5562",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4640",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5564",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4641",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5566",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4642",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5568",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4643",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5570",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4644",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5572",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4645",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5574",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4646",
+   "alertRef": "10104"
+  },
+  {
+   "nodeName": "http://localhost:3000/rest/products/search (q)",
+   "sourceid": "1",
+   "other": "",
+   "method": "GET",
+   "evidence": "",
+   "pluginId": "10104",
+   "cweid": "0",
+   "confidence": "Medium",
+   "sourceMessageId": 3793,
+   "wascid": "0",
+   "description": "Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.",
+   "messageId": "5576",
+   "inputVector": "",
+   "url": "http://localhost:3000/rest/products/search?q=",
+   "tags": {
+    "POLICY_PENTEST": "",
+    "SYSTEMIC": "https://www.zaproxy.org/docs/desktop/addons/common-library/alerttags/#systemic",
+    "CUSTOM_PAYLOADS": ""
+   },
+   "reference": "https://owasp.org/www-project-web-security-testing-guide/",
+   "solution": "",
+   "alert": "User Agent Fuzzer",
+   "param": "Header User-Agent",
+   "attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+   "name": "User Agent Fuzzer",
+   "risk": "Informational",
+   "id": "4647",
+   "alertRef": "10104"
+  }
+ ],
+ "progress": [
+  "http://localhost:3000",
+  {
+   "HostProcess": [
+    {
+     "Plugin": [
+      "Path Traversal",
+      "6",
+      "release",
+      "Complete",
+      "1665",
+      "15",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote File Inclusion",
+      "7",
+      "release",
+      "Complete",
+      "1089",
+      "10",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Source Code Disclosure - /WEB-INF Folder",
+      "10045",
+      "release",
+      "Complete",
+      "9812",
+      "88",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote Code Execution - Shell Shock",
+      "10048",
+      "release",
+      "Complete",
+      "9811",
+      "2",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Heartbleed OpenSSL Vulnerability",
+      "20015",
+      "release",
+      "Complete",
+      "5",
+      "3",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Source Code Disclosure - CVE-2012-1823",
+      "20017",
+      "release",
+      "Complete",
+      "4",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote Code Execution - CVE-2012-1823",
+      "20018",
+      "release",
+      "Complete",
+      "210",
+      "2",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "External Redirect",
+      "20019",
+      "release",
+      "Complete",
+      "979",
+      "9",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Server Side Include",
+      "40009",
+      "release",
+      "Complete",
+      "433",
+      "4",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cross Site Scripting (Reflected)",
+      "40012",
+      "release",
+      "Complete",
+      "548",
+      "5",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cross Site Scripting (Persistent) - Prime",
+      "40016",
+      "release",
+      "Complete",
+      "111",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cross Site Scripting (Persistent) - Spider",
+      "40017",
+      "release",
+      "Complete",
+      "110",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cross Site Scripting (Persistent)",
+      "40014",
+      "release",
+      "Complete",
+      "2",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection",
+      "40018",
+      "release",
+      "Complete",
+      "884",
+      "8",
+      "1"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection - MySQL (Time Based)",
+      "40019",
+      "release",
+      "Complete",
+      "1080",
+      "10",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection - Hypersonic SQL (Time Based)",
+      "40020",
+      "release",
+      "Complete",
+      "1078",
+      "10",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection - Oracle (Time Based)",
+      "40021",
+      "release",
+      "Complete",
+      "553",
+      "5",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection - PostgreSQL (Time Based)",
+      "40022",
+      "release",
+      "Complete",
+      "541",
+      "5",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cross Site Scripting (DOM Based)",
+      "40026",
+      "release",
+      "Complete",
+      "13438",
+      "10",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SQL Injection - MsSQL (Time Based)",
+      "40027",
+      "release",
+      "Complete",
+      "1082",
+      "10",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Log4Shell",
+      "40043",
+      "release",
+      "Skipped, no Active Scan OAST service is selected.",
+      "1",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Spring4Shell",
+      "40045",
+      "release",
+      "Complete",
+      "214",
+      "2",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote Code Execution (React2Shell)",
+      "40048",
+      "release",
+      "Complete",
+      "106",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Server Side Code Injection",
+      "90019",
+      "release",
+      "Complete",
+      "873",
+      "8",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote OS Command Injection",
+      "90020",
+      "release",
+      "Complete",
+      "2048",
+      "19",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "XPath Injection",
+      "90021",
+      "release",
+      "Complete",
+      "325",
+      "3",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "XML External Entity Attack",
+      "90023",
+      "release",
+      "Complete",
+      "1",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Generic Padding Oracle",
+      "90024",
+      "release",
+      "Complete",
+      "3",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Cloud Metadata Potentially Exposed",
+      "90034",
+      "release",
+      "Complete",
+      "1405",
+      "13",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Server Side Template Injection",
+      "90035",
+      "release",
+      "Complete",
+      "1572",
+      "14",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Server Side Template Injection (Blind)",
+      "90036",
+      "release",
+      "Complete",
+      "1282",
+      "12",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Remote OS Command Injection (Time Based)",
+      "90037",
+      "release",
+      "Complete",
+      "1715",
+      "16",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Directory Browsing",
+      "0",
+      "release",
+      "Complete",
+      "113",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "HTTP Only Site",
+      "10106",
+      "release",
+      "Complete",
+      "108",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Buffer Overflow",
+      "30001",
+      "release",
+      "Complete",
+      "110",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Format String Error",
+      "30002",
+      "release",
+      "Complete",
+      "321",
+      "3",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "CRLF Injection",
+      "40003",
+      "release",
+      "Complete",
+      "748",
+      "7",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Parameter Tampering",
+      "40008",
+      "release",
+      "Complete",
+      "753",
+      "7",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "ELMAH Information Leak",
+      "40028",
+      "release",
+      "Complete",
+      "109",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Trace.axd Information Leak",
+      "40029",
+      "release",
+      "Complete",
+      "109",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      ".htaccess Information Leak",
+      "40032",
+      "release",
+      "Complete",
+      "104",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      ".env Information Leak",
+      "40034",
+      "release",
+      "Complete",
+      "105",
+      "1",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Spring Actuator Information Leak",
+      "40042",
+      "release",
+      "Complete",
+      "213",
+      "2",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Hidden File Finder",
+      "40035",
+      "release",
+      "Complete",
+      "5657",
+      "52",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Exponential Entity Expansion (Billion Laughs Attack)",
+      "40044",
+      "release",
+      "Complete",
+      "5649",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "XSLT Injection",
+      "90017",
+      "release",
+      "Complete",
+      "867",
+      "8",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "HTTPS Content Available via HTTP",
+      "10047",
+      "release",
+      "Complete",
+      "1",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "GET for POST",
+      "10058",
+      "release",
+      "Complete",
+      "1",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "User Agent Fuzzer",
+      "10104",
+      "release",
+      "Complete",
+      "1323",
+      "12",
+      "12"
+     ]
+    },
+    {
+     "Plugin": [
+      "Script Active Scan Rules",
+      "50000",
+      "release",
+      "Complete",
+      "241",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SOAP Action Spoofing",
+      "90026",
+      "beta",
+      "Complete",
+      "2",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "SOAP XML Injection",
+      "90029",
+      "beta",
+      "Complete",
+      "1",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "Plugin": [
+      "Swagger UI Secret & Vulnerability Detector",
+      "100043",
+      "alpha",
+      "Complete",
+      "1674",
+      "12",
+      "0"
+     ]
+    }
+   ]
+  }
+ ]
+}
